@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Worble\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Worble\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Forum.1103136853.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Worble\projects\applications\reference-project\api" t="IncludeFlat">
+      <e p=".editorconfig" t="Include" />
+      <e p="Core" t="Include" />
+      <e p="Forum.Application" t="IncludeRecursive">
+        <e p="Abstractions" t="Include">
+          <e p="Dates" t="Include">
+            <e p="IDateTimeService.cs" t="Include" />
+          </e>
+          <e p="DbContexts" t="Include">
+            <e p="IForumDbContext.cs" t="Include" />
+          </e>
+          <e p="Identity" t="Include">
+            <e p="ICurrentUserService.cs" t="Include" />
+          </e>
+          <e p="Mapping" t="Include">
+            <e p="IDomainEntityToDbEntityMapper.cs" t="Include" />
+            <e p="IViewModelToDomainEntityMapper.cs" t="Include" />
+          </e>
+          <e p="Models" t="Include">
+            <e p="IDbEntity.cs" t="Include" />
+            <e p="IViewModel.cs" t="Include" />
+          </e>
+          <e p="Queries" t="Include">
+            <e p="ICacheableQuery.cs" t="Include" />
+          </e>
+          <e p="Serialization" t="Include">
+            <e p="IByteSerializer.cs" t="Include" />
+            <e p="IJsonSerializer.cs" t="Include" />
+          </e>
+        </e>
+        <e p="ApplicationLayer.cs" t="Include" />
+        <e p="ApplicationLayerException.cs" t="Include" />
+        <e p="Behaviours" t="Include">
+          <e p="RequestCachingBehavior.cs" t="Include" />
+          <e p="RequestLogger.cs" t="Include" />
+          <e p="RequestPerformanceBehavior.cs" t="Include" />
+          <e p="RequestValidationBehavior.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Common" t="Include">
+          <e p="Posts" t="Include">
+            <e p="PostDomainToDbEntityMapper.cs" t="Include" />
+            <e p="PostEntity.cs" t="Include" />
+            <e p="PostEntityException.cs" t="Include" />
+          </e>
+          <e p="Threads" t="Include">
+            <e p="ThreadDomainToDbEntityMapper.cs" t="Include" />
+            <e p="ThreadEntity.cs" t="Include" />
+            <e p="ThreadEntityException.cs" t="Include" />
+          </e>
+          <e p="Topics" t="Include">
+            <e p="TopicDomainToDbEntityMapper.cs" t="Include" />
+            <e p="TopicEntity.cs" t="Include" />
+            <e p="TopicEntityException.cs" t="Include" />
+          </e>
+          <e p="Users" t="Include">
+            <e p="UserDomainToDbEntityMapper.cs" t="Include" />
+            <e p="UserEntity.cs" t="Include" />
+            <e p="UserEntityException.cs" t="Include" />
+          </e>
+        </e>
+        <e p="DependencyInjectionExtensions.cs" t="Include" />
+        <e p="Forum" t="Include">
+          <e p="Commands" t="Include">
+            <e p="Seed" t="Include">
+              <e p="SeedCommand.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Queries" t="Include">
+            <e p="GetAllUsers" t="Include">
+              <e p="GetAllUsersQuery.cs" t="Include" />
+              <e p="GetAllUsersViewModel.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Forum.Application.csproj" t="IncludeRecursive" />
+        <e p="Models" t="Include">
+          <e p="AuditableDbEntity.cs" t="Include" />
+          <e p="DomainToAuditableDbEntityMapper.cs" t="Include" />
+          <e p="RequestCacheConfigurations" t="Include">
+            <e p="RequestCacheConfiguration.cs" t="Include" />
+          </e>
+          <e p="RequestLoggingConfigurations" t="Include">
+            <e p="RequestLoggingConfiguration.cs" t="Include" />
+          </e>
+          <e p="RequestPerformanceConfigurations" t="Include">
+            <e p="RequestPerformanceConfiguration.cs" t="Include" />
+          </e>
+          <e p="RequestValidationConfigurations" t="Include">
+            <e p="RequestValidationConfiguration.cs" t="Include" />
+          </e>
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="Forum.Application.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Forum.Common" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Forum.Common.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="Forum.Common.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Forum.Domain" t="IncludeRecursive">
+        <e p="Abstractions" t="Include">
+          <e p="Events" t="Include">
+            <e p="IDomainEvent.cs" t="Include" />
+            <e p="IDomainEventDispatcher.cs" t="Include" />
+          </e>
+          <e p="Models" t="Include">
+            <e p="IBuilder`T.cs" t="Include" />
+            <e p="IDomainEntity.cs" t="Include" />
+          </e>
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DependencyInjectionExtensions.cs" t="Include" />
+        <e p="DomainLayer.cs" t="Include" />
+        <e p="DomainLayerException.cs" t="Include" />
+        <e p="Events" t="Include">
+          <e p="DomainEvent.cs" t="Include" />
+          <e p="DomainEventDispatcher.cs" t="Include" />
+          <e p="NullDomainEventDispatcher.cs" t="Include" />
+        </e>
+        <e p="Forum" t="Include">
+          <e p="Posts" t="Include">
+            <e p="Post.cs" t="Include" />
+            <e p="PostBuilder.cs" t="Include" />
+            <e p="PostCreatedEvent.cs" t="Include" />
+            <e p="PostException.cs" t="Include" />
+            <e p="PostValidator.cs" t="Include" />
+          </e>
+          <e p="Threads" t="Include">
+            <e p="Thread.cs" t="Include" />
+            <e p="ThreadBuilder.cs" t="Include" />
+            <e p="ThreadCreatedEvent.cs" t="Include" />
+            <e p="ThreadException.cs" t="Include" />
+            <e p="ThreadValidator.cs" t="Include" />
+          </e>
+          <e p="Topics" t="Include">
+            <e p="Topic.cs" t="Include" />
+            <e p="TopicBuilder.cs" t="Include" />
+            <e p="TopicCreatedEvent.cs" t="Include" />
+            <e p="TopicException.cs" t="Include" />
+            <e p="TopicValidator.cs" t="Include" />
+          </e>
+          <e p="Users" t="Include">
+            <e p="User.cs" t="Include" />
+            <e p="UserBuilder.cs" t="Include" />
+            <e p="UserException.cs" t="Include" />
+            <e p="UserRegisteredEvent.cs" t="Include" />
+            <e p="UserValidator.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Forum.Domain.csproj" t="IncludeRecursive" />
+        <e p="Models" t="Include">
+          <e p="DomainEntity.cs" t="Include" />
+          <e p="DomainEntity`T.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="Forum.Domain.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Forum.Infrastructure" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Dates" t="Include">
+          <e p="DateTimeService.cs" t="Include" />
+        </e>
+        <e p="Forum.Infrastructure.csproj" t="IncludeRecursive" />
+        <e p="Identity" t="Include">
+          <e p="CurrentUserService.cs" t="Include" />
+        </e>
+        <e p="InfrastructureInjectionExtensions.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="Forum.Infrastructure.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Serialization" t="Include">
+          <e p="ByteSerializer.cs" t="Include" />
+          <e p="SystemJsonSerializer.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Forum.Persistence" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Common" t="Include">
+          <e p="Posts" t="Include">
+            <e p="PostEntityConfiguration.cs" t="Include" />
+          </e>
+          <e p="Threads" t="Include">
+            <e p="ThreadEntityConfiguration.cs" t="Include" />
+          </e>
+          <e p="Topics" t="Include">
+            <e p="TopicEntityConfiguration.cs" t="Include" />
+          </e>
+          <e p="Users" t="Include">
+            <e p="UserEntityConfiguration.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Configuration" t="Include">
+          <e p="BaseAuditableDbEntityConfiguration.cs" t="Include" />
+        </e>
+        <e p="DbContexts" t="Include">
+          <e p="ForumDbContext.cs" t="Include" />
+        </e>
+        <e p="Forum.Persistence.csproj" t="IncludeRecursive" />
+        <e p="Migrations" t="Include">
+          <e p="20200929212021_init.cs" t="Include" />
+          <e p="20200929212021_init.Designer.cs" t="Include" />
+          <e p="ForumDbContextModelSnapshot.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="ForumDbContextConfigurations" t="Include">
+            <e p="ForumDbContextConfiguration.cs" t="Include" />
+          </e>
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="Forum.Persistence.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="PersistenceInjectionExtensions.cs" t="Include" />
+      </e>
+      <e p="Forum.Presentation" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="SeedController.cs" t="Include" />
+          <e p="UserController.cs" t="Include" />
+        </e>
+        <e p="database.db" t="Include" />
+        <e p="Forum.Presentation.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Forum.Presentation.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+      </e>
+      <e p="Forum.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Periphery" t="Include" />
+      <e p="Solution Items" t="Include" />
+    </e>
+  </component>
+</project>

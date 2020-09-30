@@ -1,0 +1,3 @@
+C:\Users\Worble\projects\applications\reference-project\api\Forum.Infrastructure\obj\Debug\netstandard2.0\Forum.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Worble\projects\applications\reference-project\api\Forum.Infrastructure\obj\Debug\netstandard2.0\Forum.Infrastructure.AssemblyInfo.cs
+C:\Users\Worble\projects\applications\reference-project\api\Forum.Infrastructure\obj\Debug\netstandard2.0\Forum.Infrastructure.csproj.CoreCompileInputs.cache

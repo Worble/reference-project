@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<Nullable>Enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Forum.Application\Forum.Application.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.0-rc.1.20451.13" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.8" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="5.0.0-rc.1.20451.13" />
+	  <PackageReference Include="Roslynator.Analyzers" Version="3.0.0">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	  <PackageReference Include="Roslynator.CodeAnalysis.Analyzers" Version="1.0.0">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	  <PackageReference Include="Roslynator.Formatting.Analyzers" Version="1.0.0">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	</ItemGroup>
+</Project>

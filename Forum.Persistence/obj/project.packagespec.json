@@ -1,0 +1,86 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Persistence\\Forum.Persistence.csproj",
+    "projectName": "Forum.Persistence",
+    "projectPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Persistence\\Forum.Persistence.csproj",
+    "outputPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Persistence\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netstandard2.1"
+    ],
+    "sources": {
+      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netstandard2.1": {
+        "projectReferences": {
+          "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Application\\Forum.Application.csproj": {
+            "projectPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Application\\Forum.Application.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netstandard2.1": {
+      "dependencies": {
+        "Microsoft.EntityFrameworkCore.Relational": {
+          "target": "Package",
+          "version": "[5.0.0-rc.1.20451.13, )"
+        },
+        "Microsoft.EntityFrameworkCore.Sqlite": {
+          "target": "Package",
+          "version": "[3.1.8, )"
+        },
+        "Microsoft.EntityFrameworkCore.Sqlite.Core": {
+          "target": "Package",
+          "version": "[5.0.0-rc.1.20451.13, )"
+        },
+        "Roslynator.Analyzers": {
+          "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[3.0.0, )"
+        },
+        "Roslynator.CodeAnalysis.Analyzers": {
+          "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[1.0.0, )"
+        },
+        "Roslynator.Formatting.Analyzers": {
+          "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[1.0.0, )"
+        }
+      },
+      "imports": [
+        "net461",
+        "net462",
+        "net47",
+        "net471",
+        "net472",
+        "net48"
+      ],
+      "assetTargetFallback": true,
+      "warn": true,
+      "frameworkReferences": {
+        "NETStandard.Library": {
+          "privateAssets": "all"
+        }
+      },
+      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+    }
+  }
+}

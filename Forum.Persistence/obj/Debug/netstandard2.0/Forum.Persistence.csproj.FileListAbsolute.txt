@@ -1,0 +1,4 @@
+C:\Users\Worble\projects\applications\reference-project\api\Forum.Persistence\obj\Debug\netstandard2.0\Forum.Persistence.csprojAssemblyReference.cache
+C:\Users\Worble\projects\applications\reference-project\api\Forum.Persistence\obj\Debug\netstandard2.0\Forum.Persistence.AssemblyInfoInputs.cache
+C:\Users\Worble\projects\applications\reference-project\api\Forum.Persistence\obj\Debug\netstandard2.0\Forum.Persistence.AssemblyInfo.cs
+C:\Users\Worble\projects\applications\reference-project\api\Forum.Persistence\obj\Debug\netstandard2.0\Forum.Persistence.csproj.CoreCompileInputs.cache
