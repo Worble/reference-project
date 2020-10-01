@@ -1,9 +1,0 @@
-C:\Users\Robert\projects\dotnet\reference-project\Forum.Common\bin\Debug\netstandard2.1\Forum.Common.deps.json
-C:\Users\Robert\projects\dotnet\reference-project\Forum.Common\bin\Debug\netstandard2.1\Forum.Common.dll
-C:\Users\Robert\projects\dotnet\reference-project\Forum.Common\bin\Debug\netstandard2.1\Forum.Common.pdb
-C:\Users\Robert\projects\dotnet\reference-project\Forum.Common\obj\Debug\netstandard2.1\Forum.Common.csprojAssemblyReference.cache
-C:\Users\Robert\projects\dotnet\reference-project\Forum.Common\obj\Debug\netstandard2.1\Forum.Common.AssemblyInfoInputs.cache
-C:\Users\Robert\projects\dotnet\reference-project\Forum.Common\obj\Debug\netstandard2.1\Forum.Common.AssemblyInfo.cs
-C:\Users\Robert\projects\dotnet\reference-project\Forum.Common\obj\Debug\netstandard2.1\Forum.Common.csproj.CoreCompileInputs.cache
-C:\Users\Robert\projects\dotnet\reference-project\Forum.Common\obj\Debug\netstandard2.1\Forum.Common.dll
-C:\Users\Robert\projects\dotnet\reference-project\Forum.Common\obj\Debug\netstandard2.1\Forum.Common.pdb

@@ -1,4 +1,0 @@
-C:\Users\Worble\projects\applications\reference-project\api\Forum.Domain\obj\Debug\netstandard2.0\Forum.Domain.csprojAssemblyReference.cache
-C:\Users\Worble\projects\applications\reference-project\api\Forum.Domain\obj\Debug\netstandard2.0\Forum.Domain.AssemblyInfoInputs.cache
-C:\Users\Worble\projects\applications\reference-project\api\Forum.Domain\obj\Debug\netstandard2.0\Forum.Domain.AssemblyInfo.cs
-C:\Users\Worble\projects\applications\reference-project\api\Forum.Domain\obj\Debug\netstandard2.0\Forum.Domain.csproj.CoreCompileInputs.cache
