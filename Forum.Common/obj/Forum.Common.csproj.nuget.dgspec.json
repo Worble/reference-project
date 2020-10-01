@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Common\\Forum.Common.csproj": {}
+    "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Common\\Forum.Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Common\\Forum.Common.csproj": {
+    "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Common\\Forum.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Common\\Forum.Common.csproj",
+        "projectUniqueName": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Common\\Forum.Common.csproj",
         "projectName": "Forum.Common",
-        "projectPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Common\\Forum.Common.csproj",
-        "packagesPath": "C:\\Users\\Worble\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Common\\obj\\",
+        "projectPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Common\\Forum.Common.csproj",
+        "packagesPath": "C:\\Users\\Robert\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Common\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Worble\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Robert\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -75,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

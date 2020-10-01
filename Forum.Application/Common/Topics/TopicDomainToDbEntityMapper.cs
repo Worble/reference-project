@@ -41,7 +41,12 @@ namespace Forum.Application.Common.Topics
 			Config.NewConfig<Topic, TopicEntity>()
 				.Map(dest => dest.Id, src => src.Id)
 				.Map(dest => dest.Name, src => src.Name)
-				.Map(dest => dest.Parent, src => MapToDbEntity(src.Parent))
+				.Map(dest => dest.Parent, src => src.Parent != null && !src.Parent.Id.HasValue
+					? MapToDbEntity(src.Parent)
+					: null)
+				.Map(dest => dest.ParentId, src => src.Parent != null
+					? src.Parent.Id ?? default
+					: default)
 				.Ignore(dest => dest.Threads)
 				.Ignore(dest => dest.Children);
 
@@ -49,7 +54,7 @@ namespace Forum.Application.Common.Topics
 				.Map(dest => dest.Id, src => src.Id)
 				.Map(dest => dest.Name, src => src.Name)
 				.Map(dest => dest.Threads, src => CreateThreads(src))
-				.Map(dest => dest.Parent, src => MapToDomainEntity(src.Parent))
+				.Map(dest => dest.Parent, src => src.Parent != null ? MapToDomainEntity(src.Parent) : null)
 				.Map(dest => dest.Children, src => src.Children.Select(topic => MapToDomainEntity(topic)));
 		}
 

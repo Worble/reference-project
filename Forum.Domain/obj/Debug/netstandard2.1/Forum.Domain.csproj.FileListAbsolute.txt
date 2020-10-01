@@ -1,0 +1,9 @@
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Domain\bin\Debug\netstandard2.1\Forum.Domain.deps.json
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Domain\bin\Debug\netstandard2.1\Forum.Domain.dll
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Domain\bin\Debug\netstandard2.1\Forum.Domain.pdb
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Domain\obj\Debug\netstandard2.1\Forum.Domain.csprojAssemblyReference.cache
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Domain\obj\Debug\netstandard2.1\Forum.Domain.AssemblyInfoInputs.cache
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Domain\obj\Debug\netstandard2.1\Forum.Domain.AssemblyInfo.cs
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Domain\obj\Debug\netstandard2.1\Forum.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Domain\obj\Debug\netstandard2.1\Forum.Domain.dll
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Domain\obj\Debug\netstandard2.1\Forum.Domain.pdb

@@ -40,7 +40,7 @@ namespace Forum.Application.Common.Users
 				.Map(dest => dest.AuditCreatedDateUtc, src => src.JoinDateUtc)
 				.Map(dest => dest.Password, src => src.Password)
 				.Map(dest => dest.Username, src => src.Username)
-				.Map(dest => dest.Id, src => src.Id);
+				.Map(dest => dest.Id, src => src.Id ?? default);
 
 			// DB entity -> domain
 			_ = Config.NewConfig<UserEntity, User>()

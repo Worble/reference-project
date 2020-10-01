@@ -8,10 +8,6 @@ namespace Forum.Domain.Forum.Topics
 {
 	public class Topic : DomainEntity<Topic>
 	{
-		internal Topic()
-		{
-		}
-
 		public string Name { get; internal set; } = string.Empty;
 
 		public Topic? Parent { get; internal set; }
@@ -22,7 +18,7 @@ namespace Forum.Domain.Forum.Topics
 		internal override void Validate()
 		{
 			ValidationResult? validationResults = new TopicValidator().Validate(this);
-			if (validationResults.IsValid)
+			if (!validationResults.IsValid)
 			{
 				throw new TopicException(
 					"Topic validation failed, see inner exception for validation errors.",

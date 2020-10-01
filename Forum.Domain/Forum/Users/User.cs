@@ -7,10 +7,6 @@ namespace Forum.Domain.Forum.Users
 {
 	public class User : DomainEntity<User>
 	{
-		internal User()
-		{
-		}
-
 		public string EmailAddress { get; internal set; } = string.Empty;
 		public DateTime JoinDateUtc { get; internal set; }
 		public string Password { get; internal set; } = string.Empty;

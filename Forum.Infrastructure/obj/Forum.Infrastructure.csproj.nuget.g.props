@@ -5,7 +5,7 @@
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\Worble\.nuget\packages\;C:\Program Files\dotnet\sdk\NuGetFallbackFolder</NuGetPackageFolders>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\Robert\.nuget\packages\</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
     <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.5.0</NuGetToolVersion>
   </PropertyGroup>
@@ -13,8 +13,8 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgRoslynator_Formatting_Analyzers Condition=" '$(PkgRoslynator_Formatting_Analyzers)' == '' ">C:\Users\Worble\.nuget\packages\roslynator.formatting.analyzers\1.0.0</PkgRoslynator_Formatting_Analyzers>
-    <PkgRoslynator_CodeAnalysis_Analyzers Condition=" '$(PkgRoslynator_CodeAnalysis_Analyzers)' == '' ">C:\Users\Worble\.nuget\packages\roslynator.codeanalysis.analyzers\1.0.0</PkgRoslynator_CodeAnalysis_Analyzers>
-    <PkgRoslynator_Analyzers Condition=" '$(PkgRoslynator_Analyzers)' == '' ">C:\Users\Worble\.nuget\packages\roslynator.analyzers\3.0.0</PkgRoslynator_Analyzers>
+    <PkgRoslynator_Formatting_Analyzers Condition=" '$(PkgRoslynator_Formatting_Analyzers)' == '' ">C:\Users\Robert\.nuget\packages\roslynator.formatting.analyzers\1.0.0</PkgRoslynator_Formatting_Analyzers>
+    <PkgRoslynator_CodeAnalysis_Analyzers Condition=" '$(PkgRoslynator_CodeAnalysis_Analyzers)' == '' ">C:\Users\Robert\.nuget\packages\roslynator.codeanalysis.analyzers\1.0.0</PkgRoslynator_CodeAnalysis_Analyzers>
+    <PkgRoslynator_Analyzers Condition=" '$(PkgRoslynator_Analyzers)' == '' ">C:\Users\Robert\.nuget\packages\roslynator.analyzers\3.0.0</PkgRoslynator_Analyzers>
   </PropertyGroup>
 </Project>

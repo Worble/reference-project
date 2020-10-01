@@ -1,10 +1,8 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using Forum.Application.Common.Posts;
 using Forum.Application.Common.Topics;
 using Forum.Application.Models;
-using Forum.Domain.Forum.Posts;
 using Forum.Domain.Forum.Threads;
 using Mapster;
 
@@ -43,55 +41,26 @@ namespace Forum.Application.Common.Threads
 		{
 			Config.NewConfig<Thread, ThreadEntity>()
 				.Map(dest => dest.Id, src => src.Id)
-				.Map(dest => dest.Posts, src => CreatePostsEntity(src))
+				.Map(dest => dest.Posts, src => src.Posts.Select(
+					post => new PostDomainToDbEntityMapper().MapToDbEntity(post)
+				))
 				.Map(dest => dest.Title, src => src.Title)
-				.Map(dest => dest.Topic, src => CreateTopicEntity(src));
+				.Map(dest => dest.Topic, src => src.Topic != null && !src.Topic.Id.HasValue
+					? new TopicDomainToDbEntityMapper().MapToDbEntity(src.Topic)
+					: null)
+				.Map(dest => dest.TopicId, src => src.Topic != null
+					? src.Topic.Id ?? default
+					: default);
 
 			Config.NewConfig<ThreadEntity, Thread>()
 				.Map(dest => dest.Id, src => src.Id)
-				.Map(dest => dest.Posts, src => CreatePosts(src))
+				.Map(dest => dest.Posts, src => src.Posts.Select(
+					post => new PostDomainToDbEntityMapper().MapToDomainEntity(post)
+				))
 				.Map(dest => dest.Title, src => src.Title)
-				.Map(dest => dest.Topic,
-					src => new TopicDomainToDbEntityMapper().MapToDomainEntity(
-						src.Topic));
-		}
-
-		private static IEnumerable<Post> CreatePosts(ThreadEntity? thread)
-		{
-			if (thread?.Posts == null)
-			{
-				throw new ThreadEntityException(
-					"Could not create Post Entity from Domain object, see inner exception for details",
-					new ArgumentNullException(nameof(thread.Posts)));
-			}
-
-			var mapper = new PostDomainToDbEntityMapper();
-			return thread.Posts.Select(post => mapper.MapToDomainEntity(post));
-		}
-
-		private static IEnumerable<PostEntity> CreatePostsEntity(Thread? thread)
-		{
-			if (thread?.Posts == null)
-			{
-				throw new ThreadEntityException(
-					"Could not create Post Entity from Domain object, see inner exception for details",
-					new ArgumentNullException(nameof(thread.Posts)));
-			}
-
-			var mapper = new PostDomainToDbEntityMapper();
-			return thread.Posts.Select(post => mapper.MapToDbEntity(post));
-		}
-
-		private static TopicEntity CreateTopicEntity(Thread? thread)
-		{
-			if (thread?.Topic?.Id.HasValue != true)
-			{
-				throw new ThreadEntityException(
-					"Could not create Post Entity from Domain object, see inner exception for details",
-					new ArgumentNullException(nameof(thread.Topic)));
-			}
-
-			return new TopicEntity {Id = thread.Topic.Id!.Value};
+				.Map(dest => dest.Topic, src => src.Topic != null
+					? new TopicDomainToDbEntityMapper().MapToDomainEntity(src.Topic)
+					: null);
 		}
 	}
 }

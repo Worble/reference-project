@@ -17,7 +17,7 @@ namespace Forum.Domain.Forum.Posts
 		internal override void Validate()
 		{
 			ValidationResult? validationResults = new PostValidator().Validate(this);
-			if (validationResults.IsValid)
+			if (!validationResults.IsValid)
 			{
 				throw new PostException(
 					"Thread validation failed, see inner exception for validation errors.",

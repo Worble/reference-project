@@ -3,10 +3,7 @@ using Forum.Domain.Abstractions.Models;
 
 namespace Forum.Application.Abstractions.Mapping
 {
-	public interface IDomainEntityToDbEntityMapper
-	{}
-
-	public interface IDomainEntityToDbEntityMapper<TDomainEntity, TDbEntity> : IDomainEntityToDbEntityMapper
+	public interface IDomainEntityToDbEntityMapper<TDomainEntity, TDbEntity>
 		where TDomainEntity : IDomainEntity where TDbEntity : IDbEntity
 	{
 		TDbEntity MapToDbEntity(TDomainEntity domainEntity);

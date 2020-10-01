@@ -1479,7 +1479,7 @@
       ]
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
@@ -2353,7 +2353,7 @@
       ]
     },
     "System.Numerics.Vectors/4.5.0": {
-      "sha512": "MNcaYxUJvUcoXOa+jgKl/GDw/Mh+wMrxDjW4dre7qrp35LUGTjUBNtZsNjxsWX592ocdyqt1X5hMJB+5OStoYw==",
+      "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
       "type": "package",
       "path": "system.numerics.vectors/4.5.0",
       "files": [
@@ -3536,23 +3536,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Worble\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Robert\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Persistence\\Forum.Persistence.csproj",
+      "projectUniqueName": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Persistence\\Forum.Persistence.csproj",
       "projectName": "Forum.Persistence",
-      "projectPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Persistence\\Forum.Persistence.csproj",
-      "packagesPath": "C:\\Users\\Worble\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Persistence\\obj\\",
+      "projectPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Persistence\\Forum.Persistence.csproj",
+      "packagesPath": "C:\\Users\\Robert\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Persistence\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Worble\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Robert\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3565,8 +3561,8 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Application\\Forum.Application.csproj": {
-              "projectPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Application\\Forum.Application.csproj"
+            "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Application\\Forum.Application.csproj": {
+              "projectPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Application\\Forum.Application.csproj"
             }
           }
         }
@@ -3626,7 +3622,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

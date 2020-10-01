@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "gKpiGrM06n7bnrRPw2LluYO+Mh8CFtoISxr9oD2xIeH8bfUNhBDbB/R3YwmhNqS01CntSuXEA3PlckQruymxJA==",
+  "dgSpecHash": "1ZRlWvtiBQ9RX0ps75rbRGotfTI3dLVQrD2DwpHUF3mueFdVzHcWVTZBsXfgT8N6J+Ivvlvm+o4wl7pU9hMSGw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Domain\\Forum.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Domain\\Forum.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Worble\\.nuget\\packages\\fluentvalidation\\9.2.0\\fluentvalidation.9.2.0.nupkg.sha512",
-    "C:\\Users\\Worble\\.nuget\\packages\\mediatr\\8.1.0\\mediatr.8.1.0.nupkg.sha512",
-    "C:\\Users\\Worble\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.8\\microsoft.extensions.dependencyinjection.abstractions.3.1.8.nupkg.sha512",
-    "C:\\Users\\Worble\\.nuget\\packages\\roslynator.analyzers\\3.0.0\\roslynator.analyzers.3.0.0.nupkg.sha512",
-    "C:\\Users\\Worble\\.nuget\\packages\\roslynator.codeanalysis.analyzers\\1.0.0\\roslynator.codeanalysis.analyzers.1.0.0.nupkg.sha512",
-    "C:\\Users\\Worble\\.nuget\\packages\\roslynator.formatting.analyzers\\1.0.0\\roslynator.formatting.analyzers.1.0.0.nupkg.sha512"
+    "C:\\Users\\Robert\\.nuget\\packages\\fluentvalidation\\9.2.0\\fluentvalidation.9.2.0.nupkg.sha512",
+    "C:\\Users\\Robert\\.nuget\\packages\\mediatr\\8.1.0\\mediatr.8.1.0.nupkg.sha512",
+    "C:\\Users\\Robert\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.8\\microsoft.extensions.dependencyinjection.abstractions.3.1.8.nupkg.sha512",
+    "C:\\Users\\Robert\\.nuget\\packages\\roslynator.analyzers\\3.0.0\\roslynator.analyzers.3.0.0.nupkg.sha512",
+    "C:\\Users\\Robert\\.nuget\\packages\\roslynator.codeanalysis.analyzers\\1.0.0\\roslynator.codeanalysis.analyzers.1.0.0.nupkg.sha512",
+    "C:\\Users\\Robert\\.nuget\\packages\\roslynator.formatting.analyzers\\1.0.0\\roslynator.formatting.analyzers.1.0.0.nupkg.sha512"
   ],
   "logs": []
 }

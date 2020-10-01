@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Worble\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Worble\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Forum.1103136853.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Worble\projects\applications\reference-project\api" t="IncludeFlat">
+    <e p="C:\Users\Robert\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Robert\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Forum.-1618162327.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Robert\projects\dotnet\reference-project" t="IncludeFlat">
       <e p=".editorconfig" t="Include" />
       <e p="Core" t="Include" />
       <e p="Forum.Application" t="IncludeRecursive">
@@ -225,6 +225,10 @@
         <e p="Migrations" t="Include">
           <e p="20200929212021_init.cs" t="Include" />
           <e p="20200929212021_init.Designer.cs" t="Include" />
+          <e p="20201001120822_topics are now self referencing.cs" t="Include" />
+          <e p="20201001120822_topics are now self referencing.Designer.cs" t="Include" />
+          <e p="20201001130010_add is required to posts.cs" t="Include" />
+          <e p="20201001130010_add is required to posts.Designer.cs" t="Include" />
           <e p="ForumDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">

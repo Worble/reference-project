@@ -10,6 +10,7 @@ namespace Forum.Application.Common.Threads
 		public int Id { get; set; }
 		public List<PostEntity> Posts { get; internal set; } = new List<PostEntity>();
 		public string Title { get; internal set; } = string.Empty;
+		public int TopicId { get; set; }
 		public TopicEntity? Topic { get; internal set; }
 	}
 }

@@ -169,23 +169,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Worble\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Robert\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Domain\\Forum.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Domain\\Forum.Domain.csproj",
       "projectName": "Forum.Domain",
-      "projectPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Domain\\Forum.Domain.csproj",
-      "packagesPath": "C:\\Users\\Worble\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Domain\\obj\\",
+      "projectPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Domain\\Forum.Domain.csproj",
+      "packagesPath": "C:\\Users\\Robert\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Domain\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Worble\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Robert\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -255,7 +251,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

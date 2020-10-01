@@ -10,6 +10,7 @@ namespace Forum.Domain.Forum.Threads
 	public class ThreadBuilder : IBuilder<Thread>
 	{
 		private readonly Thread _thread;
+		private PostBuilder? _postBuilder;
 
 		public ThreadBuilder()
 		{
@@ -18,6 +19,12 @@ namespace Forum.Domain.Forum.Threads
 
 		public async Task<Thread> Build()
 		{
+			if (_postBuilder == null)
+			{
+				throw new ThreadException("No post associated with thread");
+			}
+
+			_thread.Posts = new List<Post> {await _postBuilder.Build()};
 			_thread.Validate();
 			_thread.AddDomainEvent(new ThreadCreatedEvent(_thread));
 			await _thread
@@ -32,14 +39,15 @@ namespace Forum.Domain.Forum.Threads
 			return this;
 		}
 
-		public ThreadBuilder WithPost(Post post)
+		public ThreadBuilder WithPost(PostBuilder postBuilder)
 		{
-			if (post == null)
+			if (postBuilder == null)
 			{
-				throw new ArgumentNullException(nameof(post));
+				throw new ArgumentNullException(nameof(postBuilder));
 			}
 
-			_thread.Posts = new List<Post> {post};
+			postBuilder.InThread(_thread);
+			_postBuilder = postBuilder;
 			return this;
 		}
 

@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "7T+07tO8spCBb/llB/Ct0bFiN1IUq/gkiUbY1Q/Mrlagc74IZan9pvjGkeaooWp9l6JuADXwZQuYNSQTKJ70RA==",
+  "dgSpecHash": "foKPQxWypMsS6mOW+0ZZfSNHH232/CHFzrihCDL24FKfGaE9gqpy+Tb3T3JfpVxVBOu+Bl+gI86To7aq3NcnIg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Common\\Forum.Common.csproj",
+  "projectFilePath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Common\\Forum.Common.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Worble\\.nuget\\packages\\roslynator.analyzers\\3.0.0\\roslynator.analyzers.3.0.0.nupkg.sha512",
-    "C:\\Users\\Worble\\.nuget\\packages\\roslynator.codeanalysis.analyzers\\1.0.0\\roslynator.codeanalysis.analyzers.1.0.0.nupkg.sha512",
-    "C:\\Users\\Worble\\.nuget\\packages\\roslynator.formatting.analyzers\\1.0.0\\roslynator.formatting.analyzers.1.0.0.nupkg.sha512"
+    "C:\\Users\\Robert\\.nuget\\packages\\roslynator.analyzers\\3.0.0\\roslynator.analyzers.3.0.0.nupkg.sha512",
+    "C:\\Users\\Robert\\.nuget\\packages\\roslynator.codeanalysis.analyzers\\1.0.0\\roslynator.codeanalysis.analyzers.1.0.0.nupkg.sha512",
+    "C:\\Users\\Robert\\.nuget\\packages\\roslynator.formatting.analyzers\\1.0.0\\roslynator.formatting.analyzers.1.0.0.nupkg.sha512"
   ],
   "logs": []
 }

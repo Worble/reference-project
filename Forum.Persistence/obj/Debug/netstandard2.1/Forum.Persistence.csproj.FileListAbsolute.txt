@@ -1,0 +1,14 @@
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Persistence\bin\Debug\netstandard2.1\Forum.Persistence.deps.json
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Persistence\bin\Debug\netstandard2.1\Forum.Persistence.dll
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Persistence\bin\Debug\netstandard2.1\Forum.Persistence.pdb
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Persistence\bin\Debug\netstandard2.1\Forum.Application.dll
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Persistence\bin\Debug\netstandard2.1\Forum.Domain.dll
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Persistence\bin\Debug\netstandard2.1\Forum.Application.pdb
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Persistence\bin\Debug\netstandard2.1\Forum.Domain.pdb
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Persistence\obj\Debug\netstandard2.1\Forum.Persistence.csprojAssemblyReference.cache
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Persistence\obj\Debug\netstandard2.1\Forum.Persistence.AssemblyInfoInputs.cache
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Persistence\obj\Debug\netstandard2.1\Forum.Persistence.AssemblyInfo.cs
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Persistence\obj\Debug\netstandard2.1\Forum.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Persistence\obj\Debug\netstandard2.1\Forum.Persistence.csproj.CopyComplete
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Persistence\obj\Debug\netstandard2.1\Forum.Persistence.dll
+C:\Users\Robert\projects\dotnet\reference-project\Forum.Persistence\obj\Debug\netstandard2.1\Forum.Persistence.pdb

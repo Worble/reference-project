@@ -1,7 +1,8 @@
-﻿using MediatR;
+﻿using System.Threading.Tasks;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Forum.Presentation
+namespace Forum.Presentation.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]
@@ -15,9 +16,9 @@ namespace Forum.Presentation
 		}
 
 		[HttpPost]
-		public IActionResult Seed()
+		public async Task<IActionResult> Seed()
 		{
-			_mediator.Send(new SeedCommand());
+			await _mediator.Send(new SeedCommand());
 			return Ok();
 		}
 	}

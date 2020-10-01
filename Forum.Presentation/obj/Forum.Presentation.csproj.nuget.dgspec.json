@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Presentation\\Forum.Presentation.csproj": {}
+    "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Presentation\\Forum.Presentation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Application\\Forum.Application.csproj": {
+    "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Application\\Forum.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Application\\Forum.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Application\\Forum.Application.csproj",
         "projectName": "Forum.Application",
-        "projectPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Application\\Forum.Application.csproj",
-        "packagesPath": "C:\\Users\\Worble\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Application\\obj\\",
+        "projectPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Application\\Forum.Application.csproj",
+        "packagesPath": "C:\\Users\\Robert\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Worble\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Robert\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,8 +27,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Domain\\Forum.Domain.csproj": {
-                "projectPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Domain\\Forum.Domain.csproj"
+              "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Domain\\Forum.Domain.csproj": {
+                "projectPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Domain\\Forum.Domain.csproj"
               }
             }
           }
@@ -107,24 +104,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Common\\Forum.Common.csproj": {
+    "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Common\\Forum.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Common\\Forum.Common.csproj",
+        "projectUniqueName": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Common\\Forum.Common.csproj",
         "projectName": "Forum.Common",
-        "projectPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Common\\Forum.Common.csproj",
-        "packagesPath": "C:\\Users\\Worble\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Common\\obj\\",
+        "projectPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Common\\Forum.Common.csproj",
+        "packagesPath": "C:\\Users\\Robert\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Common\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Worble\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Robert\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -182,24 +176,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Domain\\Forum.Domain.csproj": {
+    "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Domain\\Forum.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Domain\\Forum.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Domain\\Forum.Domain.csproj",
         "projectName": "Forum.Domain",
-        "projectPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Domain\\Forum.Domain.csproj",
-        "packagesPath": "C:\\Users\\Worble\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Domain\\obj\\",
+        "projectPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Domain\\Forum.Domain.csproj",
+        "packagesPath": "C:\\Users\\Robert\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Worble\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Robert\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -269,24 +260,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Infrastructure\\Forum.Infrastructure.csproj": {
+    "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Infrastructure\\Forum.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Infrastructure\\Forum.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Infrastructure\\Forum.Infrastructure.csproj",
         "projectName": "Forum.Infrastructure",
-        "projectPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Infrastructure\\Forum.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Worble\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Infrastructure\\Forum.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Robert\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Worble\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Robert\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -299,8 +287,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Application\\Forum.Application.csproj": {
-                "projectPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Application\\Forum.Application.csproj"
+              "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Application\\Forum.Application.csproj": {
+                "projectPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Application\\Forum.Application.csproj"
               }
             }
           }
@@ -352,24 +340,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Persistence\\Forum.Persistence.csproj": {
+    "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Persistence\\Forum.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Persistence\\Forum.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Persistence\\Forum.Persistence.csproj",
         "projectName": "Forum.Persistence",
-        "projectPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Persistence\\Forum.Persistence.csproj",
-        "packagesPath": "C:\\Users\\Worble\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Persistence\\obj\\",
+        "projectPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Persistence\\Forum.Persistence.csproj",
+        "packagesPath": "C:\\Users\\Robert\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Persistence\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Worble\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Robert\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -382,8 +367,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Application\\Forum.Application.csproj": {
-                "projectPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Application\\Forum.Application.csproj"
+              "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Application\\Forum.Application.csproj": {
+                "projectPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Application\\Forum.Application.csproj"
               }
             }
           }
@@ -443,24 +428,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Presentation\\Forum.Presentation.csproj": {
+    "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Presentation\\Forum.Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Presentation\\Forum.Presentation.csproj",
+        "projectUniqueName": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Presentation\\Forum.Presentation.csproj",
         "projectName": "Forum.Presentation",
-        "projectPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Presentation\\Forum.Presentation.csproj",
-        "packagesPath": "C:\\Users\\Worble\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Presentation\\obj\\",
+        "projectPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Presentation\\Forum.Presentation.csproj",
+        "packagesPath": "C:\\Users\\Robert\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Presentation\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Worble\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Robert\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -473,20 +455,20 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Application\\Forum.Application.csproj": {
-                "projectPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Application\\Forum.Application.csproj"
+              "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Application\\Forum.Application.csproj": {
+                "projectPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Application\\Forum.Application.csproj"
               },
-              "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Common\\Forum.Common.csproj": {
-                "projectPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Common\\Forum.Common.csproj"
+              "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Common\\Forum.Common.csproj": {
+                "projectPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Common\\Forum.Common.csproj"
               },
-              "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Domain\\Forum.Domain.csproj": {
-                "projectPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Domain\\Forum.Domain.csproj"
+              "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Domain\\Forum.Domain.csproj": {
+                "projectPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Domain\\Forum.Domain.csproj"
               },
-              "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Infrastructure\\Forum.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Infrastructure\\Forum.Infrastructure.csproj"
+              "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Infrastructure\\Forum.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Infrastructure\\Forum.Infrastructure.csproj"
               },
-              "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Persistence\\Forum.Persistence.csproj": {
-                "projectPath": "C:\\Users\\Worble\\projects\\applications\\reference-project\\api\\Forum.Persistence\\Forum.Persistence.csproj"
+              "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Persistence\\Forum.Persistence.csproj": {
+                "projectPath": "C:\\Users\\Robert\\projects\\dotnet\\reference-project\\Forum.Persistence\\Forum.Persistence.csproj"
               }
             }
           }
@@ -559,7 +541,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

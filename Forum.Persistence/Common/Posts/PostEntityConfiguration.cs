@@ -11,8 +11,16 @@ namespace Forum.Persistence.Common.Posts
 			base.Configure(builder);
 			builder.HasKey(e => e.Id);
 			builder.Property(e => e.Content).IsRequired();
-			builder.HasOne(e => e.CreatedBy).WithMany(e => e!.Posts);
-			builder.HasOne(e => e.Thread).WithMany(e => e!.Posts);
+			builder
+				.HasOne(e => e.CreatedBy)
+				.WithMany(e => e!.Posts)
+				.HasForeignKey(e => e.CreatedById)
+				.IsRequired();
+			builder
+				.HasOne(e => e.Thread)
+				.WithMany(e => e!.Posts)
+				.HasForeignKey(e => e.ThreadId)
+				.IsRequired();
 		}
 	}
 }

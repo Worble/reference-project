@@ -12,7 +12,10 @@ namespace Forum.Persistence.Common.Threads
 			builder.HasKey(e => e.Id);
 			builder.Property(e => e.Title).IsRequired();
 			builder.HasMany(e => e.Posts).WithOne(e => e.Thread!);
-			builder.HasOne(e => e.Topic).WithMany(e => e!.Threads);
+			builder.HasOne(e => e.Topic)
+				.WithMany(e => e!.Threads)
+				.HasForeignKey(e => e.TopicId)
+				.IsRequired();
 		}
 	}
 }
