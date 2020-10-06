@@ -1,6 +1,9 @@
 using System;
+using System.Collections.Generic;
 using FluentValidation;
 using FluentValidation.Results;
+using Forum.Domain.Forum.Posts;
+using Forum.Domain.Forum.Threads;
 using Forum.Domain.Models;
 
 namespace Forum.Domain.Forum.Users
@@ -11,6 +14,8 @@ namespace Forum.Domain.Forum.Users
 		public DateTime JoinDateUtc { get; internal set; }
 		public string Password { get; internal set; } = string.Empty;
 		public string Username { get; internal set; } = string.Empty;
+		public ICollection<Post> Posts { get; } = default!;
+		public ICollection<Thread> Threads { get; } = default!;
 
 		internal override void Validate()
 		{

@@ -3,14 +3,15 @@ using System.Threading.Tasks;
 using Forum.Application.Abstractions.Dates;
 using Forum.Application.Abstractions.DbContexts;
 using Forum.Application.Abstractions.Identity;
-using Forum.Application.Common.Posts;
-using Forum.Application.Common.Threads;
-using Forum.Application.Common.Topics;
-using Forum.Application.Common.Users;
+using Forum.Application.Common.Forum.AuditEntries;
 using Forum.Application.Models;
+using Forum.Domain.Forum.Posts;
+using Forum.Domain.Forum.Topics;
+using Forum.Domain.Forum.Users;
 using Forum.Persistence.Models.ForumDbContextConfigurations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using Thread = Forum.Domain.Forum.Threads.Thread;
 
 namespace Forum.Persistence.DbContexts
 {
@@ -31,10 +32,11 @@ namespace Forum.Persistence.DbContexts
 			_dateTimeService = dateTimeService;
 		}
 
-		public DbSet<PostEntity> Posts { get; set; } = default!;
-		public DbSet<ThreadEntity> Threads { get; set; } = default!;
-		public DbSet<TopicEntity> Topics { get; set; } = default!;
-		public DbSet<UserEntity> Users { get; set; } = default!;
+		public DbSet<Post> Posts { get; } = default!;
+		public DbSet<Thread> Threads { get; } = default!;
+		public DbSet<Topic> Topics { get; } = default!;
+		public DbSet<User> Users { get; } = default!;
+		public DbSet<AuditEntry> AuditEntries { get; } = default!;
 
 		public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
 		{
