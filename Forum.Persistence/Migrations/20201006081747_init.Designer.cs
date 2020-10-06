@@ -9,14 +9,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Forum.Persistence.Migrations
 {
     [DbContext(typeof(ForumDbContext))]
-    [Migration("20200929212021_init")]
+    [Migration("20201006081747_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "5.0.0-rc.1.20451.13");
+                .HasAnnotation("ProductVersion", "3.1.8");
 
             modelBuilder.Entity("Forum.Application.Common.Posts.PostEntity", b =>
                 {
@@ -48,10 +48,10 @@ namespace Forum.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("CreatedById")
+                    b.Property<int>("CreatedById")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("ThreadId")
+                    b.Property<int>("ThreadId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
@@ -93,7 +93,7 @@ namespace Forum.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("TopicId")
+                    b.Property<int>("TopicId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
@@ -133,7 +133,12 @@ namespace Forum.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("ParentId")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("ParentId");
 
                     b.ToTable("Topics");
                 });
@@ -185,39 +190,33 @@ namespace Forum.Persistence.Migrations
                 {
                     b.HasOne("Forum.Application.Common.Users.UserEntity", "CreatedBy")
                         .WithMany("Posts")
-                        .HasForeignKey("CreatedById");
+                        .HasForeignKey("CreatedById")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Forum.Application.Common.Threads.ThreadEntity", "Thread")
                         .WithMany("Posts")
-                        .HasForeignKey("ThreadId");
-
-                    b.Navigation("CreatedBy");
-
-                    b.Navigation("Thread");
+                        .HasForeignKey("ThreadId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Forum.Application.Common.Threads.ThreadEntity", b =>
                 {
                     b.HasOne("Forum.Application.Common.Topics.TopicEntity", "Topic")
                         .WithMany("Threads")
-                        .HasForeignKey("TopicId");
-
-                    b.Navigation("Topic");
-                });
-
-            modelBuilder.Entity("Forum.Application.Common.Threads.ThreadEntity", b =>
-                {
-                    b.Navigation("Posts");
+                        .HasForeignKey("TopicId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Forum.Application.Common.Topics.TopicEntity", b =>
                 {
-                    b.Navigation("Threads");
-                });
-
-            modelBuilder.Entity("Forum.Application.Common.Users.UserEntity", b =>
-                {
-                    b.Navigation("Posts");
+                    b.HasOne("Forum.Application.Common.Topics.TopicEntity", "Parent")
+                        .WithMany("Children")
+                        .HasForeignKey("ParentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

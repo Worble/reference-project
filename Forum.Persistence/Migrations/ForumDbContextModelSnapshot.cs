@@ -14,7 +14,7 @@ namespace Forum.Persistence.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "5.0.0-rc.1.20451.13");
+                .HasAnnotation("ProductVersion", "3.1.8");
 
             modelBuilder.Entity("Forum.Application.Common.Posts.PostEntity", b =>
                 {
@@ -131,7 +131,7 @@ namespace Forum.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("ParentId")
+                    b.Property<int>("ParentId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
@@ -197,10 +197,6 @@ namespace Forum.Persistence.Migrations
                         .HasForeignKey("ThreadId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("CreatedBy");
-
-                    b.Navigation("Thread");
                 });
 
             modelBuilder.Entity("Forum.Application.Common.Threads.ThreadEntity", b =>
@@ -210,34 +206,15 @@ namespace Forum.Persistence.Migrations
                         .HasForeignKey("TopicId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Topic");
                 });
 
             modelBuilder.Entity("Forum.Application.Common.Topics.TopicEntity", b =>
                 {
                     b.HasOne("Forum.Application.Common.Topics.TopicEntity", "Parent")
                         .WithMany("Children")
-                        .HasForeignKey("ParentId");
-
-                    b.Navigation("Parent");
-                });
-
-            modelBuilder.Entity("Forum.Application.Common.Threads.ThreadEntity", b =>
-                {
-                    b.Navigation("Posts");
-                });
-
-            modelBuilder.Entity("Forum.Application.Common.Topics.TopicEntity", b =>
-                {
-                    b.Navigation("Children");
-
-                    b.Navigation("Threads");
-                });
-
-            modelBuilder.Entity("Forum.Application.Common.Users.UserEntity", b =>
-                {
-                    b.Navigation("Posts");
+                        .HasForeignKey("ParentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

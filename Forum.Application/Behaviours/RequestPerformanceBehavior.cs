@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using Forum.Application.Abstractions.Identity;
@@ -42,18 +42,18 @@ namespace Forum.Application.Behaviours
 			_timer.Stop();
 
 			var name = typeof(TRequest).Name;
-			_currentUserService.TryGetCurrentUser(out var user);
+			var userExists = _currentUserService.TryGetCurrentUser(out var user);
 
 			if (_optionsSnapshot.Value.WarningLogTimeMilliseconds.HasValue &&
-			    _timer.ElapsedMilliseconds > _optionsSnapshot.Value.WarningLogTimeMilliseconds)
+				_timer.ElapsedMilliseconds > _optionsSnapshot.Value.WarningLogTimeMilliseconds)
 			{
 				_logger.LogWarning(
-					$"User {user.Username} executed request ms {name} ({_timer.ElapsedMilliseconds} milliseconds) which was over longer than {_optionsSnapshot.Value.WarningLogTimeMilliseconds} ms with parameters {_jsonSerializer.Serialize(request)}");
+					$"User {(userExists ? user!.Username : string.Empty)} executed request ms {name} ({_timer.ElapsedMilliseconds} milliseconds) which was over longer than {_optionsSnapshot.Value.WarningLogTimeMilliseconds} ms with parameters {_jsonSerializer.Serialize(request)}");
 			}
 			else if (_optionsSnapshot.Value.LogAllTimes)
 			{
 				_logger.LogInformation(
-					$"User {user.Username} executed request {name} ({_timer.ElapsedMilliseconds} milliseconds) with parameters {_jsonSerializer.Serialize(request)}");
+					$"User {(userExists ? user!.Username : string.Empty)} executed request {name} ({_timer.ElapsedMilliseconds} milliseconds) with parameters {_jsonSerializer.Serialize(request)}");
 			}
 
 			return response;

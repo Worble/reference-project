@@ -1,4 +1,4 @@
-﻿using System.Threading;
+using System.Threading;
 using System.Threading.Tasks;
 using Forum.Application.Abstractions.Identity;
 using Forum.Application.Abstractions.Serialization;
@@ -39,7 +39,7 @@ namespace Forum.Application.Behaviours
 			_currentUserService.TryGetCurrentUser(out var user);
 
 			_logger.LogInformation(
-				$"User {user.Username} making request {requestName} with parameters {_jsonSerializer.Serialize(request)}");
+				$"User {(user != null ? user.Username : string.Empty)} making request {requestName} with parameters {_jsonSerializer.Serialize(request)}");
 			return next();
 		}
 	}

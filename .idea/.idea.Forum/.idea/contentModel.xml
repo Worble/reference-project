@@ -223,12 +223,8 @@
         </e>
         <e p="Forum.Persistence.csproj" t="IncludeRecursive" />
         <e p="Migrations" t="Include">
-          <e p="20200929212021_init.cs" t="Include" />
-          <e p="20200929212021_init.Designer.cs" t="Include" />
-          <e p="20201001120822_topics are now self referencing.cs" t="Include" />
-          <e p="20201001120822_topics are now self referencing.Designer.cs" t="Include" />
-          <e p="20201001130010_add is required to posts.cs" t="Include" />
-          <e p="20201001130010_add is required to posts.Designer.cs" t="Include" />
+          <e p="20201006081747_init.cs" t="Include" />
+          <e p="20201006081747_init.Designer.cs" t="Include" />
           <e p="ForumDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -253,7 +249,6 @@
           <e p="SeedController.cs" t="Include" />
           <e p="UserController.cs" t="Include" />
         </e>
-        <e p="database.db" t="Include" />
         <e p="Forum.Presentation.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

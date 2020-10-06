@@ -25,79 +25,26 @@
     <list default="true" id="5bfba19a-fe11-4ab6-9709-1da84540c1df" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Forum/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Forum/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Forum/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Forum/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreateMigration.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateMigration.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Forum.Application/Abstractions/Identity/ICurrentUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Application/Abstractions/Identity/ICurrentUserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Application/Abstractions/Mapping/IDomainEntityToDbEntityMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Application/Abstractions/Mapping/IDomainEntityToDbEntityMapper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Application/Common/Posts/PostDomainToDbEntityMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Application/Common/Posts/PostDomainToDbEntityMapper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Application/Common/Posts/PostEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Application/Common/Posts/PostEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Application/Common/Threads/ThreadDomainToDbEntityMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Application/Common/Threads/ThreadDomainToDbEntityMapper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Application/Common/Threads/ThreadEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Application/Common/Threads/ThreadEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Application/Common/Topics/TopicDomainToDbEntityMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Application/Common/Topics/TopicDomainToDbEntityMapper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Application/Common/Topics/TopicEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Application/Common/Topics/TopicEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Application/Common/Users/UserDomainToDbEntityMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Application/Common/Users/UserDomainToDbEntityMapper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Application/Forum/Commands/Seed/SeedCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Application/Forum/Commands/Seed/SeedCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Application/obj/Debug/netstandard2.1/Forum.Application.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Application/obj/Debug/netstandard2.1/Forum.Application.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Application/obj/Debug/netstandard2.1/Forum.Application.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Application/obj/Debug/netstandard2.1/Forum.Application.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Application/obj/Debug/netstandard2.1/Forum.Application.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Application/obj/Debug/netstandard2.1/Forum.Application.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Application/obj/Forum.Application.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Application/obj/Forum.Application.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Application/obj/Forum.Application.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Application/obj/Forum.Application.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Application/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Application/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Application/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Application/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Application/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Application/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Application/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Application/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Common/obj/Debug/netstandard2.1/Forum.Common.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Common/obj/Debug/netstandard2.1/Forum.Common.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Common/obj/Debug/netstandard2.1/Forum.Common.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Common/obj/Debug/netstandard2.1/Forum.Common.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Common/obj/Forum.Common.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Common/obj/Forum.Common.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Common/obj/Forum.Common.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Common/obj/Forum.Common.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Common/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Common/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Common/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Common/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Common/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Common/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Common/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Common/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Domain/Forum/Posts/Post.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Domain/Forum/Posts/Post.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Domain/Forum/Threads/Thread.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Domain/Forum/Threads/Thread.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Domain/Forum/Threads/ThreadBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Domain/Forum/Threads/ThreadBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Domain/Forum/Topics/Topic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Domain/Forum/Topics/Topic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Domain/Forum/Users/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Domain/Forum/Users/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum.Application/Behaviours/RequestLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Application/Behaviours/RequestLogger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum.Application/Behaviours/RequestPerformanceBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Application/Behaviours/RequestPerformanceBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum.Application/Forum.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Application/Forum.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum.Domain/Forum.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Domain/Forum.Domain.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Forum.Domain/Models/DomainEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Domain/Models/DomainEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Domain/obj/Debug/netstandard2.1/Forum.Domain.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Domain/obj/Debug/netstandard2.1/Forum.Domain.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Domain/obj/Debug/netstandard2.1/Forum.Domain.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Domain/obj/Debug/netstandard2.1/Forum.Domain.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Domain/obj/Forum.Domain.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Domain/obj/Forum.Domain.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Domain/obj/Forum.Domain.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Domain/obj/Forum.Domain.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Domain/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Domain/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Domain/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Domain/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Domain/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Domain/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Domain/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Domain/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Forum.Infrastructure/Identity/CurrentUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Infrastructure/Identity/CurrentUserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Infrastructure/obj/Debug/netstandard2.1/Forum.Infrastructure.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Infrastructure/obj/Debug/netstandard2.1/Forum.Infrastructure.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Infrastructure/obj/Debug/netstandard2.1/Forum.Infrastructure.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Infrastructure/obj/Debug/netstandard2.1/Forum.Infrastructure.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Infrastructure/obj/Forum.Infrastructure.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Infrastructure/obj/Forum.Infrastructure.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Infrastructure/obj/Forum.Infrastructure.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Infrastructure/obj/Forum.Infrastructure.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Infrastructure/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Infrastructure/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Infrastructure/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Infrastructure/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Infrastructure/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Infrastructure/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Infrastructure/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Infrastructure/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Persistence/Common/Posts/PostEntityConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Persistence/Common/Posts/PostEntityConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Persistence/Common/Threads/ThreadEntityConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Persistence/Common/Threads/ThreadEntityConfiguration.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Forum.Persistence/Common/Topics/TopicEntityConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Persistence/Common/Topics/TopicEntityConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum.Persistence/DbContexts/ForumDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Persistence/DbContexts/ForumDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum.Persistence/Forum.Persistence.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Persistence/Forum.Persistence.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum.Persistence/Migrations/20200929212021_init.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum.Persistence/Migrations/20200929212021_init.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum.Persistence/Migrations/20201001120822_topics are now self referencing.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum.Persistence/Migrations/20201001120822_topics are now self referencing.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum.Persistence/Migrations/20201001130010_add is required to posts.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum.Persistence/Migrations/20201001130010_add is required to posts.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Forum.Persistence/Migrations/ForumDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Persistence/Migrations/ForumDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Persistence/obj/Debug/netstandard2.1/Forum.Persistence.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Persistence/obj/Debug/netstandard2.1/Forum.Persistence.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Persistence/obj/Debug/netstandard2.1/Forum.Persistence.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Persistence/obj/Debug/netstandard2.1/Forum.Persistence.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Persistence/obj/Forum.Persistence.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Persistence/obj/Forum.Persistence.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Persistence/obj/Forum.Persistence.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Persistence/obj/Forum.Persistence.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Persistence/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Persistence/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Persistence/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Persistence/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Persistence/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Persistence/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Persistence/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Persistence/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Presentation/Controllers/SeedController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Presentation/Controllers/SeedController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Presentation/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Presentation/database.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Presentation/obj/Debug/netcoreapp3.1/Forum.Presentation.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Presentation/obj/Debug/netcoreapp3.1/Forum.Presentation.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Presentation/obj/Debug/netcoreapp3.1/Forum.Presentation.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Presentation/obj/Debug/netcoreapp3.1/Forum.Presentation.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Presentation/obj/Debug/netcoreapp3.1/Forum.Presentation.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Presentation/obj/Debug/netcoreapp3.1/Forum.Presentation.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Presentation/obj/Forum.Presentation.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Presentation/obj/Forum.Presentation.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Presentation/obj/Forum.Presentation.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Presentation/obj/Forum.Presentation.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Presentation/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Presentation/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Presentation/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Presentation/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Presentation/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Presentation/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum.Presentation/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Presentation/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum.Presentation/Forum.Presentation.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.Presentation/Forum.Presentation.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum.Presentation/database.db" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,18 +60,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/31F94AF4-0455-4C4C-BD4F-AB58A9F2D1BF/46/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/AD61CA47-F8B7-4CC6-93A0-BA44CC73B5C7/25F/AsyncMethodBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/CF38E32A-92D3-40E3-ABE3-7A488DB956B3/254/IdentityMap.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1779C4D4-16BA-478A-BA37-9023E05E1441/33/472241fa/TypeAdapter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/31F94AF4-0455-4C4C-BD4F-AB58A9F2D1BF/26/Select.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/128EEF00-630C-4CBB-ABA5-CF9A935C3C6C/F/RequestHandlerWrapper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/AD61CA47-F8B7-4CC6-93A0-BA44CC73B5C7/25F/AsyncMethodBuilder.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/CF38E32A-92D3-40E3-ABE3-7A488DB956B3/254/IdentityMap.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1779C4D4-16BA-478A-BA37-9023E05E1441/a7/343f7461/TypeAdapterConfig.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/128EEF00-630C-4CBB-ABA5-CF9A935C3C6C/F/RequestHandlerWrapper.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -144,9 +85,7 @@
         <option value="$PROJECT_DIR$/Forum.Domain/Forum/Topics/Topic.cs" />
         <option value="$PROJECT_DIR$/Forum.Domain/Forum/Threads/Thread.cs" />
         <option value="$PROJECT_DIR$/Forum.Domain/Forum/Posts/Post.cs" />
-        <option value="$PROJECT_DIR$/Forum.Infrastructure/Identity/CurrentUserService.cs" />
         <option value="$PROJECT_DIR$/Forum.Application/Common/Users/UserDomainToDbEntityMapper.cs" />
-        <option value="$PROJECT_DIR$/Forum.Domain/Models/DomainEntity.cs" />
         <option value="$PROJECT_DIR$/Forum.Application/Forum/Commands/Seed/SeedCommand.cs" />
         <option value="$PROJECT_DIR$/Forum.Application/Common/Threads/ThreadEntity.cs" />
         <option value="$PROJECT_DIR$/Forum.Application/Common/Posts/PostEntity.cs" />
@@ -157,6 +96,9 @@
         <option value="$PROJECT_DIR$/Forum.Application/Common/Topics/TopicEntity.cs" />
         <option value="$PROJECT_DIR$/Forum.Application/Common/Topics/TopicDomainToDbEntityMapper.cs" />
         <option value="$PROJECT_DIR$/Forum.Application/Common/Threads/ThreadDomainToDbEntityMapper.cs" />
+        <option value="$PROJECT_DIR$/Forum.Domain/Models/DomainEntity.cs" />
+        <option value="$PROJECT_DIR$/Forum.Application/Abstractions/Identity/ICurrentUserService.cs" />
+        <option value="$PROJECT_DIR$/Forum.Infrastructure/Identity/CurrentUserService.cs" />
       </list>
     </option>
   </component>
@@ -223,7 +165,8 @@
       <option name="presentableId" value="Default" />
       <updated>1601488678704</updated>
       <workItem from="1601488683840" duration="7581000" />
-      <workItem from="1601552680493" duration="13500000" />
+      <workItem from="1601552680493" duration="14209000" />
+      <workItem from="1601973413208" duration="4254000" />
     </task>
     <servers />
   </component>
@@ -240,6 +183,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -257,86 +201,86 @@
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state width="499" height="466" key="DebuggerActiveHint/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601563323842" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1601565712227">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1601652790212">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601565712227" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1601565712227">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601652790212" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1601652790211">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601565712227" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1601565712227">
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601652790211" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1601652790211">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601565712227" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1601565712227">
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601652790211" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1601652790211">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601565712227" />
-    <state width="1877" height="220" key="GridCell.Tab.1.bottom" timestamp="1601565705546">
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601652790211" />
+    <state width="1877" height="220" key="GridCell.Tab.1.bottom" timestamp="1601652790193">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601565705546" />
-    <state width="1877" height="220" key="GridCell.Tab.1.center" timestamp="1601565705546">
+    <state width="1877" height="220" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601652790193" />
+    <state width="1877" height="220" key="GridCell.Tab.1.center" timestamp="1601652790193">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.1.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601565705546" />
-    <state width="1877" height="220" key="GridCell.Tab.1.left" timestamp="1601565705546">
+    <state width="1877" height="220" key="GridCell.Tab.1.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601652790193" />
+    <state width="1877" height="220" key="GridCell.Tab.1.left" timestamp="1601652790193">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.1.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601565705546" />
-    <state width="1877" height="220" key="GridCell.Tab.1.right" timestamp="1601565705546">
+    <state width="1877" height="220" key="GridCell.Tab.1.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601652790193" />
+    <state width="1877" height="220" key="GridCell.Tab.1.right" timestamp="1601652790193">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.1.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601565705546" />
-    <state width="1877" height="220" key="GridCell.Tab.2.bottom" timestamp="1601565705547">
+    <state width="1877" height="220" key="GridCell.Tab.1.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601652790193" />
+    <state width="1877" height="220" key="GridCell.Tab.2.bottom" timestamp="1601652790193">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.2.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601565705547" />
-    <state width="1877" height="220" key="GridCell.Tab.2.center" timestamp="1601565705547">
+    <state width="1877" height="220" key="GridCell.Tab.2.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601652790193" />
+    <state width="1877" height="220" key="GridCell.Tab.2.center" timestamp="1601652790193">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.2.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601565705547" />
-    <state width="1877" height="220" key="GridCell.Tab.2.left" timestamp="1601565705547">
+    <state width="1877" height="220" key="GridCell.Tab.2.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601652790193" />
+    <state width="1877" height="220" key="GridCell.Tab.2.left" timestamp="1601652790193">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.2.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601565705547" />
-    <state width="1877" height="220" key="GridCell.Tab.2.right" timestamp="1601565705547">
+    <state width="1877" height="220" key="GridCell.Tab.2.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601652790193" />
+    <state width="1877" height="220" key="GridCell.Tab.2.right" timestamp="1601652790193">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.2.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601565705547" />
-    <state width="1877" height="220" key="GridCell.Tab.3.bottom" timestamp="1601565705547">
+    <state width="1877" height="220" key="GridCell.Tab.2.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601652790193" />
+    <state width="1877" height="220" key="GridCell.Tab.3.bottom" timestamp="1601652790193">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.3.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601565705547" />
-    <state width="1877" height="220" key="GridCell.Tab.3.center" timestamp="1601565705547">
+    <state width="1877" height="220" key="GridCell.Tab.3.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601652790193" />
+    <state width="1877" height="220" key="GridCell.Tab.3.center" timestamp="1601652790193">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.3.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601565705547" />
-    <state width="1877" height="220" key="GridCell.Tab.3.left" timestamp="1601565705547">
+    <state width="1877" height="220" key="GridCell.Tab.3.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601652790193" />
+    <state width="1877" height="220" key="GridCell.Tab.3.left" timestamp="1601652790193">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.3.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601565705547" />
-    <state width="1877" height="220" key="GridCell.Tab.3.right" timestamp="1601565705547">
+    <state width="1877" height="220" key="GridCell.Tab.3.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601652790193" />
+    <state width="1877" height="220" key="GridCell.Tab.3.right" timestamp="1601652790193">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.3.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601565705547" />
-    <state width="1877" height="220" key="GridCell.Tab.4.bottom" timestamp="1601565705547">
+    <state width="1877" height="220" key="GridCell.Tab.3.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601652790193" />
+    <state width="1877" height="220" key="GridCell.Tab.4.bottom" timestamp="1601652790193">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.4.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601565705547" />
-    <state width="1877" height="220" key="GridCell.Tab.4.center" timestamp="1601565705547">
+    <state width="1877" height="220" key="GridCell.Tab.4.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601652790193" />
+    <state width="1877" height="220" key="GridCell.Tab.4.center" timestamp="1601652790193">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.4.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601565705547" />
-    <state width="1877" height="220" key="GridCell.Tab.4.left" timestamp="1601565705547">
+    <state width="1877" height="220" key="GridCell.Tab.4.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601652790193" />
+    <state width="1877" height="220" key="GridCell.Tab.4.left" timestamp="1601652790193">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.4.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601565705547" />
-    <state width="1877" height="220" key="GridCell.Tab.4.right" timestamp="1601565705547">
+    <state width="1877" height="220" key="GridCell.Tab.4.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601652790193" />
+    <state width="1877" height="220" key="GridCell.Tab.4.right" timestamp="1601652790193">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.4.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601565705547" />
+    <state width="1877" height="220" key="GridCell.Tab.4.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601652790193" />
     <state x="2167" y="262" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1601554586860">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>

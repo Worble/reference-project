@@ -1,4 +1,4 @@
-﻿using System.Threading;
+using System.Threading;
 using System.Threading.Tasks;
 using Forum.Application.Abstractions.Dates;
 using Forum.Application.Abstractions.DbContexts;
@@ -31,10 +31,10 @@ namespace Forum.Persistence.DbContexts
 			_dateTimeService = dateTimeService;
 		}
 
-		public DbSet<UserEntity> Users { get; set; }
-		public DbSet<ThreadEntity> Threads { get; set; }
-		public DbSet<TopicEntity> Topics { get; set; }
-		public DbSet<PostEntity> Posts { get; set; }
+		public DbSet<PostEntity> Posts { get; set; } = default!;
+		public DbSet<ThreadEntity> Threads { get; set; } = default!;
+		public DbSet<TopicEntity> Topics { get; set; } = default!;
+		public DbSet<UserEntity> Users { get; set; } = default!;
 
 		public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
 		{
@@ -45,11 +45,11 @@ namespace Forum.Persistence.DbContexts
 				{
 					case EntityState.Added:
 						entry.Entity.AuditCreatedById = userExists
-							? user.Id.ToString()
+							? user!.Id.ToString()
 							: _options.Value.DefaultUserId;
 
 						entry.Entity.AuditCreatedByName = userExists
-							? user.Username
+							? user!.Username
 							: _options.Value.DefaultUsername;
 
 						entry.Entity.AuditCreatedDateUtc = _dateTimeService.UtcNow;
@@ -57,11 +57,11 @@ namespace Forum.Persistence.DbContexts
 
 					case EntityState.Modified:
 						entry.Entity.AuditLastModifiedById = userExists
-							? user.Id.ToString()
+							? user!.Id.ToString()
 							: _options.Value.DefaultUserId;
 
 						entry.Entity.AuditLastModifiedByName = userExists
-							? user.Username
+							? user!.Username
 							: _options.Value.DefaultUsername;
 
 						entry.Entity.AuditLastModifiedUtc = _dateTimeService.UtcNow;

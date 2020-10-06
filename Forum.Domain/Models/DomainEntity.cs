@@ -14,7 +14,7 @@ namespace Forum.Domain.Models
 
 		public IReadOnlyCollection<IDomainEvent> DomainEvents => _domainEvents.AsReadOnly();
 
-		public int? Id { get; internal set; }
+		public int? Id { get; } = default;
 
 		public void AddDomainEvent(IDomainEvent eventItem) => _domainEvents.Add(eventItem);
 

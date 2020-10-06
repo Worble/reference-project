@@ -1,4 +1,4 @@
-﻿using Forum.Application.Common.Topics;
+using Forum.Application.Common.Topics;
 using Forum.Persistence.Configuration;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -13,7 +13,7 @@ namespace Forum.Persistence.Common.Topics
 			builder.Property(e => e.Name).IsRequired();
 			builder.HasMany(e => e.Threads).WithOne(e => e.Topic!);
 			builder.HasOne(e => e.Parent)
-				.WithMany(e => e.Children!)
+				.WithMany(e => e!.Children)
 				.HasForeignKey(e => e.ParentId);
 		}
 	}
