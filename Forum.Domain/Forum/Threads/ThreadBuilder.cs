@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using Forum.Domain.Abstractions.Models;
 using Forum.Domain.Forum.Posts;
 using Forum.Domain.Forum.Topics;
+using Forum.Domain.Forum.Users;
 
 namespace Forum.Domain.Forum.Threads
 {
@@ -17,19 +17,16 @@ namespace Forum.Domain.Forum.Threads
 			_thread = new Thread();
 		}
 
-		public async Task<Thread> Build()
+		public Thread Build()
 		{
 			if (_postBuilder == null)
 			{
 				throw new ThreadException("No post associated with thread");
 			}
 
-			_thread.Posts = new List<Post> {await _postBuilder.Build()};
+			_thread.Posts = new List<Post> {_postBuilder.Build()};
 			_thread.Validate();
 			_thread.AddDomainEvent(new ThreadCreatedEvent(_thread));
-			await _thread
-				.DispatchDomainEventsAsync()
-				.ConfigureAwait(false);
 			return _thread;
 		}
 
@@ -48,6 +45,18 @@ namespace Forum.Domain.Forum.Threads
 
 			postBuilder.InThread(_thread);
 			_postBuilder = postBuilder;
+			return this;
+		}
+
+		public ThreadBuilder CreatedBy(User user)
+		{
+			_thread.CreatedBy = user ?? throw new ArgumentNullException(nameof(user));
+			return this;
+		}
+
+		public ThreadBuilder CreatedDate(DateTime createdDate)
+		{
+			_thread.CreatedDate = createdDate;
 			return this;
 		}
 

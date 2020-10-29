@@ -1,48 +1,75 @@
-﻿using System;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
 using Forum.Application.Abstractions.Dates;
 using Forum.Application.Abstractions.DbContexts;
-using Forum.Application.Abstractions.Mapping;
 using Forum.Domain.Forum.Posts;
+using Forum.Domain.Forum.Threads;
 using Forum.Domain.Forum.Topics;
 using Forum.Domain.Forum.Users;
 using MediatR;
-using Thread = Forum.Domain.Forum.Threads.Thread;
+using Microsoft.EntityFrameworkCore;
 
-namespace Forum.Presentation
+namespace Forum.Application.Forum.Commands.Seed
 {
 	public class SeedCommand : IRequest
-	{
-	}
+	{}
 
 	public class SeedCommandHandler : IRequestHandler<SeedCommand>
 	{
 		private readonly IDateTimeService _dateTimeService;
 		private readonly IForumDbContext _dbContext;
-		private readonly IDomainEntityToDbEntityMapper<Post, PostEntity> _postMapper;
-		private readonly IDomainEntityToDbEntityMapper<Thread, ThreadEntity> _threadMapper;
-		private readonly IDomainEntityToDbEntityMapper<Topic, TopicEntity> _topicMapper;
-		private readonly IDomainEntityToDbEntityMapper<User, UserEntity> _userMapper;
 
 		public SeedCommandHandler(IForumDbContext dbContext,
-			IDateTimeService dateTimeService,
-			IDomainEntityToDbEntityMapper<User, UserEntity> userMapper,
-			IDomainEntityToDbEntityMapper<Topic, TopicEntity> topicMapper,
-			IDomainEntityToDbEntityMapper<Thread, ThreadEntity> threadMapper,
-			IDomainEntityToDbEntityMapper<Post, PostEntity> postMapper)
+			IDateTimeService dateTimeService)
 		{
 			_dbContext = dbContext;
 			_dateTimeService = dateTimeService;
-			_userMapper = userMapper;
-			_topicMapper = topicMapper;
-			_threadMapper = threadMapper;
-			_postMapper = postMapper;
 		}
 
 		public async Task<Unit> Handle(SeedCommand request, CancellationToken cancellationToken)
 		{
-			throw new NotImplementedException();
+			var thread = await _dbContext.Threads.FirstOrDefaultAsync(e => e.Title == "New Thread", cancellationToken);
+			if (thread != null)
+			{
+				return Unit.Value;
+			}
+
+			var user = await _dbContext.Users.FirstOrDefaultAsync(e => e.Username == "Admin",
+				cancellationToken: cancellationToken) ?? new UserBuilder()
+				.WithPassword(BCrypt.Net.BCrypt.EnhancedHashPassword("admin"))
+				.WithUsername("Admin")
+				.WithEmailAddress("Email@Address.com")
+				.WithJoinDateUtc(_dateTimeService.UtcNow)
+				.Build();
+
+			var mainTopic = await _dbContext.Topics.FirstOrDefaultAsync(e => e.Name == "Main", cancellationToken) ??
+			                new TopicBuilder()
+				                .WithName("Main")
+				                .Build();
+
+			var generalTopic =
+				await _dbContext.Topics.FirstOrDefaultAsync(e => e.Name == "General", cancellationToken) ??
+				new TopicBuilder()
+					.WithName("General")
+					.WithParent(mainTopic)
+					.Build();
+
+			var postBuilder = new PostBuilder()
+				.WithContent("Hello World")
+				.CreatedDateUtc(_dateTimeService.UtcNow)
+				.CreatedByUser(user);
+
+			thread = new ThreadBuilder()
+				.WithTitle("New Thread")
+				.InTopic(generalTopic)
+				.WithPost(postBuilder)
+				.CreatedBy(user)
+				.CreatedDate(_dateTimeService.UtcNow)
+				.Build();
+
+			_dbContext.Threads.Add(thread);
+			await _dbContext.SaveChangesAsync(cancellationToken);
+			return Unit.Value;
 		}
 	}
 }

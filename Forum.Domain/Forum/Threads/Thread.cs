@@ -14,7 +14,7 @@ namespace Forum.Domain.Forum.Threads
 		public List<Post> Posts { get; internal set; } = new List<Post>();
 		public string Title { get; internal set; } = string.Empty;
 
-		public DateTime CreatedDate { get; internal set; } = DateTime.Now;
+		public DateTime CreatedDate { get; internal set; }
 		public Topic? Topic { get; internal set; }
 
 		public User? CreatedBy { get; internal set; }

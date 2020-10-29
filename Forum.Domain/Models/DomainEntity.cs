@@ -14,7 +14,7 @@ namespace Forum.Domain.Models
 
 		public IReadOnlyCollection<IDomainEvent> DomainEvents => _domainEvents.AsReadOnly();
 
-		public int? Id { get; } = default;
+		public int Id { get; } = default;
 
 		public void AddDomainEvent(IDomainEvent eventItem) => _domainEvents.Add(eventItem);
 
@@ -38,9 +38,9 @@ namespace Forum.Domain.Models
 			? Equals(entity)
 			: base.Equals(other);
 
-		public override int GetHashCode() => Id != null ? Id.GetHashCode() : 0;
+		public override int GetHashCode() => Id != default ? Id.GetHashCode() : 0;
 
-		public bool IsTransient() => !Id.HasValue;
+		public bool IsTransient() => Id != default;
 
 		public void RemoveDomainEvent(IDomainEvent eventItem) => _domainEvents.Remove(eventItem);
 

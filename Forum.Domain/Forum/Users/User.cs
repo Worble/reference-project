@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using FluentValidation;
 using FluentValidation.Results;
+using Forum.Common.JsonConverters;
 using Forum.Domain.Forum.Posts;
 using Forum.Domain.Forum.Threads;
 using Forum.Domain.Models;
@@ -12,7 +14,10 @@ namespace Forum.Domain.Forum.Users
 	{
 		public string EmailAddress { get; internal set; } = string.Empty;
 		public DateTime JoinDateUtc { get; internal set; }
+
+		[JsonConverter(typeof(SensitiveInformationConverter))]
 		public string Password { get; internal set; } = string.Empty;
+
 		public string Username { get; internal set; } = string.Empty;
 		public ICollection<Post> Posts { get; } = default!;
 		public ICollection<Thread> Threads { get; } = default!;

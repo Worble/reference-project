@@ -1,3 +1,4 @@
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Forum.Application.Abstractions.Identity;
@@ -39,8 +40,17 @@ namespace Forum.Application.Behaviours
 			_currentUserService.TryGetCurrentUser(out var user);
 
 			_logger.LogInformation(
-				$"User {(user != null ? user.Username : string.Empty)} making request {requestName} with parameters {_jsonSerializer.Serialize(request)}");
-			return next();
+				$"{(user != null ? user.Username : "Anonymous User")} making request {requestName} with parameters {_jsonSerializer.Serialize(request)}");
+			try
+			{
+				return next();
+			}
+			catch (Exception e)
+			{
+				_logger.LogError(e,
+					$"{(user != null ? user.Username : "Anonymous User")} making request {requestName} with parameters {_jsonSerializer.Serialize(request)} threw exception of type {e.GetType()}");
+				throw;
+			}
 		}
 	}
 }

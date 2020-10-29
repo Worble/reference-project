@@ -2,6 +2,6 @@
 {
 	public class RequestValidationConfiguration
 	{
-		public bool Enabled { get; }
+		public bool Enabled { get; set; }
 	}
 }

@@ -1,5 +1,4 @@
 using System;
-using System.Threading.Tasks;
 using Forum.Domain.Abstractions.Models;
 
 namespace Forum.Domain.Forum.Users
@@ -8,13 +7,10 @@ namespace Forum.Domain.Forum.Users
 	{
 		private readonly User _user = new User();
 
-		public async Task<User> Build()
+		public User Build()
 		{
 			_user.Validate();
 			_user.AddDomainEvent(new UserRegisteredEvent(_user));
-			await _user
-				.DispatchDomainEventsAsync()
-				.ConfigureAwait(false);
 			return _user;
 		}
 

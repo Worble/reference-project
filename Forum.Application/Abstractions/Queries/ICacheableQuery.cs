@@ -2,12 +2,10 @@
 {
 	public interface ICacheableQuery
 	{
-		bool BypassCache { get; }
-
-		string CacheKey { get; }
-
-		bool RefreshCachedEntry { get; }
-
-		bool ReplaceCachedEntry { get; }
+		bool BypassCache => false;
+		string CacheKey => GetType().Name;
+		bool ReplaceCachedEntry => false;
+		public int? SlidingExpirationMinutes => null;
+		public int? AbsoluteExpirationMinutes => null;
 	}
 }

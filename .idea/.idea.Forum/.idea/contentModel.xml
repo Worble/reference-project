@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\Robert\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Robert\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Forum.-1618162327.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Robert\projects\dotnet\reference-project" t="IncludeFlat">
+    <e p="C:\Users\Robert\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Forum.2126177262.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Robert\projects\dotnet\reference-project\Server" t="IncludeFlat">
       <e p=".editorconfig" t="Include" />
       <e p="Core" t="Include" />
       <e p="Forum.Application" t="IncludeRecursive">
@@ -18,11 +18,9 @@
             <e p="ICurrentUserService.cs" t="Include" />
           </e>
           <e p="Mapping" t="Include">
-            <e p="IDomainEntityToDbEntityMapper.cs" t="Include" />
             <e p="IViewModelToDomainEntityMapper.cs" t="Include" />
           </e>
           <e p="Models" t="Include">
-            <e p="IDbEntity.cs" t="Include" />
             <e p="IViewModel.cs" t="Include" />
           </e>
           <e p="Queries" t="Include">
@@ -43,10 +41,8 @@
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Common" t="Include">
-          <e p="Forum" t="Include">
-            <e p="AuditEntries" t="Include">
-              <e p="AuditEntry.cs" t="Include" />
-            </e>
+          <e p="Audit" t="Include">
+            <e p="AuditLog.cs" t="Include" />
           </e>
         </e>
         <e p="DependencyInjectionExtensions.cs" t="Include" />
@@ -61,12 +57,34 @@
               <e p="GetAllUsersQuery.cs" t="Include" />
               <e p="GetAllUsersViewModel.cs" t="Include" />
             </e>
+            <e p="GetFrontPage" t="Include">
+              <e p="GetFrontPageQuery.cs" t="Include" />
+              <e p="GetFrontPageTopicViewModel.cs" t="Include" />
+              <e p="GetFrontPageViewModel.cs" t="Include" />
+            </e>
+            <e p="GetThread" t="Include">
+              <e p="GetThreadPostViewModel.cs" t="Include" />
+              <e p="GetThreadQuery.cs" t="Include" />
+              <e p="GetThreadUserViewModel.cs" t="Include" />
+              <e p="GetThreadViewModel.cs" t="Include" />
+            </e>
+            <e p="GetTopic" t="Include">
+              <e p="GetTopicQuery.cs" t="Include" />
+              <e p="GetTopicQueryValidator.cs" t="Include" />
+              <e p="GetTopicThreadViewModel.cs" t="Include" />
+              <e p="GetTopicUserViewModel.cs" t="Include" />
+              <e p="GetTopicViewModel.cs" t="Include" />
+            </e>
+            <e p="Login" t="Include">
+              <e p="LoginFailedException.cs" t="Include" />
+              <e p="LoginQuery.cs" t="Include" />
+              <e p="LoginQueryValidator.cs" t="Include" />
+              <e p="LoginUserModel.cs" t="Include" />
+            </e>
           </e>
         </e>
         <e p="Forum.Application.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
-          <e p="AuditableDbEntity.cs" t="Include" />
-          <e p="DomainToAuditableDbEntityMapper.cs" t="Include" />
           <e p="RequestCacheConfigurations" t="Include">
             <e p="RequestCacheConfiguration.cs" t="Include" />
           </e>
@@ -91,6 +109,9 @@
       <e p="Forum.Common" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Forum.Common.csproj" t="IncludeRecursive" />
+        <e p="JsonConverters" t="Include">
+          <e p="SensitiveInformationConverter.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.1" t="Include">
@@ -187,8 +208,8 @@
       <e p="Forum.Persistence" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Common" t="Include">
-          <e p="AuditEntries" t="Include">
-            <e p="AuditEntryEntityConfiguration.cs" t="Include" />
+          <e p="AuditLogs" t="Include">
+            <e p="AuditLogConfiguration.cs" t="Include" />
           </e>
           <e p="Posts" t="Include">
             <e p="PostEntityConfiguration.cs" t="Include" />
@@ -208,14 +229,9 @@
         </e>
         <e p="Forum.Persistence.csproj" t="IncludeRecursive" />
         <e p="Migrations" t="Include">
-          <e p="20201006081747_init.cs" t="Include" />
-          <e p="20201006081747_init.Designer.cs" t="Include" />
+          <e p="20201022125445_init.cs" t="Include" />
+          <e p="20201022125445_init.Designer.cs" t="Include" />
           <e p="ForumDbContextModelSnapshot.cs" t="Include" />
-        </e>
-        <e p="Models" t="Include">
-          <e p="ForumDbContextConfigurations" t="Include">
-            <e p="ForumDbContextConfiguration.cs" t="Include" />
-          </e>
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -231,6 +247,11 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
+          <e p="Base" t="Include">
+            <e p="ForumControllerBase.cs" t="Include" />
+          </e>
+          <e p="ForumController.cs" t="Include" />
+          <e p="LoginController.cs" t="Include" />
           <e p="SeedController.cs" t="Include" />
           <e p="UserController.cs" t="Include" />
         </e>
@@ -246,6 +267,8 @@
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
         </e>
+        <e p="serilog.development.json" t="Include" />
+        <e p="serilog.json" t="Include" />
         <e p="Startup.cs" t="Include" />
       </e>
       <e p="Forum.sln" t="IncludeFlat" />

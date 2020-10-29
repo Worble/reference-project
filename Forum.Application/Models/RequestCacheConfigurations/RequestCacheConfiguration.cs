@@ -2,8 +2,8 @@
 {
 	public class RequestCacheConfiguration
 	{
-		public bool Enabled { get; }
-		public int? SlidingExpirationMinutes { get; }
-		public int? AbsoluteExpirationMinutes { get; }
+		public bool Enabled { get; set; }
+		public long? SlidingExpirationMilliseconds { get; set; }
+		public long? AbsoluteExpirationMilliseconds { get; set; }
 	}
 }

@@ -12,4 +12,4 @@ if len(sys.argv) > 2:
     sys.exit(2)
     
 subprocess.run(["dotnet", "tool", "restore"])
-subprocess.run(["dotnet", "dotnet-ef", "migrations", "add", sys.argv[1], "--startup-project", "Forum.Presentation", "--project", "Forum.Persistence"])
+subprocess.run(["dotnet", "ef", "migrations", "add", sys.argv[1], "--startup-project", "Forum.Presentation", "--project", "Forum.Persistence"])

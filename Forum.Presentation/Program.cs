@@ -1,27 +1,40 @@
 using System;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Serilog;
-using Serilog.Events;
 
 namespace Forum.Presentation
 {
 	public static class Program
 	{
-		private static IHostBuilder CreateHostBuilder(string[] args) =>
-			Host.CreateDefaultBuilder(args)
-				.UseSerilog()
+		private static IHostBuilder CreateHostBuilder(string[] args)
+		{
+			return Host.CreateDefaultBuilder(args)
+				.ConfigureAppConfiguration((hostingContext, config) =>
+				{
+					var env = hostingContext.HostingEnvironment;
+					config.AddJsonFile($"appSettings.{Environment.MachineName}.json", optional: true,
+							reloadOnChange: true)
+						.AddJsonFile("serilog.json", optional: false, reloadOnChange: true)
+						.AddJsonFile($"serilog.{env.EnvironmentName}.json", optional: true, reloadOnChange: true)
+						.AddJsonFile($"serilog.{Environment.MachineName}.json", optional: true, reloadOnChange: true);
+				})
+				.UseSerilog((context, services, configuration) =>
+				{
+					configuration.ReadFrom.Configuration(context.Configuration);
+					configuration.ReadFrom.Services(services);
+				})
 				.ConfigureWebHostDefaults(webBuilder => webBuilder.UseStartup<Startup>());
+		}
 
 		public static int Main(string[] args)
 		{
 			Log.Logger = new LoggerConfiguration()
 				.MinimumLevel.Debug()
-				.MinimumLevel.Override("Microsoft", LogEventLevel.Information)
-				.MinimumLevel.Override("Microsoft.AspNetCore", LogEventLevel.Warning)
 				.Enrich.FromLogContext()
 				.WriteTo.Console()
-				.CreateLogger();
+				.CreateBootstrapLogger();
 
 			try
 			{

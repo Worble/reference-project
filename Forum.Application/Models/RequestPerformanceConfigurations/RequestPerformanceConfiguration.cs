@@ -2,8 +2,8 @@
 {
 	public class RequestPerformanceConfiguration
 	{
-		public bool Enabled { get; }
-		public int? WarningLogTimeMilliseconds { get; }
-		public bool LogAllTimes { get; }
+		public bool Enabled { get; set; }
+		public long? WarningLogTimeMilliseconds { get; set; }
+		public bool LogAllTimes { get; set; }
 	}
 }

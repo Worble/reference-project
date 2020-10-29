@@ -26,7 +26,7 @@ namespace Forum.Application.Behaviours
 			IDateTimeService dateTimeService)
 		{
 			_options = options ?? throw new ArgumentNullException(nameof(options));
-			_dateTimeService = dateTimeService;
+			_dateTimeService = dateTimeService ?? throw new ArgumentNullException(nameof(dateTimeService));
 			_cache = cache ?? throw new ArgumentNullException(nameof(cache));
 			_byteSerializer = byteSerializer ?? throw new ArgumentNullException(nameof(byteSerializer));
 			_logger = logger ?? throw new ArgumentNullException(nameof(logger));
@@ -35,56 +35,57 @@ namespace Forum.Application.Behaviours
 		public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken,
 			RequestHandlerDelegate<TResponse> next)
 		{
-			if (!_options.Value.Enabled || !(request is ICacheableQuery cacheableQuery))
+			if (!_options.Value.Enabled
+			    || !(request is ICacheableQuery cacheableQuery)
+			    || cacheableQuery.BypassCache)
 			{
 				return await next();
 			}
 
-			TResponse response;
-
 			if (cacheableQuery.ReplaceCachedEntry)
 			{
 				_logger.LogInformation($"Replacing cache entry for key '{cacheableQuery.CacheKey}'.");
-				response = await GetResponseAndAddToCache(cancellationToken, next, cacheableQuery);
-			}
-			else
-			{
-				byte[]? cachedResponse = await _cache.GetAsync(cacheableQuery.CacheKey, cancellationToken);
-				if (cachedResponse != null)
-				{
-					_logger.LogInformation($"Cache hit for key '{cacheableQuery.CacheKey}'.");
-					response = _byteSerializer.Deserialize<TResponse>(cachedResponse);
-				}
-				else
-				{
-					_logger.LogInformation($"Cache miss for key '{cacheableQuery.CacheKey}'. Adding to cache.");
-					response = await GetResponseAndAddToCache(cancellationToken, next, cacheableQuery);
-				}
+				var response = await next();
+				await AddToCache(cancellationToken, response, cacheableQuery);
+				return response;
 			}
 
-			return response;
+			byte[]? cachedResponse = await _cache.GetAsync(cacheableQuery.CacheKey, cancellationToken);
+
+			if (cachedResponse == null)
+			{
+				_logger.LogInformation($"Cache miss for key '{cacheableQuery.CacheKey}'. Adding to cache.");
+				var response = await next();
+				await AddToCache(cancellationToken, response, cacheableQuery);
+				return response;
+			}
+
+			_logger.LogDebug($"Cache hit for key '{cacheableQuery.CacheKey}'.");
+			return _byteSerializer.Deserialize<TResponse>(cachedResponse);
 		}
 
-		private async Task<TResponse> GetResponseAndAddToCache(CancellationToken cancellationToken,
-			RequestHandlerDelegate<TResponse> next,
+		private Task AddToCache(CancellationToken cancellationToken,
+			TResponse response,
 			ICacheableQuery cacheableQuery)
 		{
-			TResponse response = await next();
-
 			var cacheOptions = new DistributedCacheEntryOptions
 			{
-				SlidingExpiration = _options.Value.SlidingExpirationMinutes.HasValue
-					? (TimeSpan?)TimeSpan.FromMinutes(_options.Value.SlidingExpirationMinutes.Value)
-					: null,
-				AbsoluteExpiration = _options.Value.AbsoluteExpirationMinutes.HasValue
-					? (DateTimeOffset?)_dateTimeService.UtcNowOffset.AddMinutes(_options.Value.AbsoluteExpirationMinutes
+				SlidingExpiration = cacheableQuery.SlidingExpirationMinutes.HasValue
+					? TimeSpan.FromMinutes(cacheableQuery.SlidingExpirationMinutes.Value)
+					: _options.Value.SlidingExpirationMilliseconds.HasValue
+						? (TimeSpan?)TimeSpan.FromMilliseconds(_options.Value.SlidingExpirationMilliseconds.Value)
+						: null,
+				AbsoluteExpiration = cacheableQuery.AbsoluteExpirationMinutes.HasValue
+					? _dateTimeService.UtcNowOffset.AddMinutes(cacheableQuery.AbsoluteExpirationMinutes
 						.Value)
-					: null
+					: _options.Value.AbsoluteExpirationMilliseconds.HasValue
+						? (DateTimeOffset?)_dateTimeService.UtcNowOffset.AddMilliseconds(_options.Value
+							.AbsoluteExpirationMilliseconds
+							.Value)
+						: null
 			};
-			await _cache.SetAsync(cacheableQuery.CacheKey, _byteSerializer.Serialize(response), cacheOptions,
+			return _cache.SetAsync(cacheableQuery.CacheKey, _byteSerializer.Serialize(response), cacheOptions,
 				cancellationToken);
-
-			return response;
 		}
 	}
 }

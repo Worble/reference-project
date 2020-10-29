@@ -11,7 +11,9 @@ namespace Forum.Persistence.Common.Users
 			builder.HasKey(e => e.Id);
 			builder.Property(e => e.Password).IsRequired();
 			builder.Property(e => e.Username).IsRequired();
+			builder.HasIndex(e => e.Username).IsUnique();
 			builder.Property(e => e.EmailAddress).IsRequired();
+			builder.HasIndex(e => e.EmailAddress).IsUnique();
 			builder.HasMany(e => e.Posts)
 				.WithOne(e => e.CreatedBy!);
 			builder.HasMany(e => e.Threads)

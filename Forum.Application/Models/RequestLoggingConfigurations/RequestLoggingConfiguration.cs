@@ -2,6 +2,6 @@
 {
 	public class RequestLoggingConfiguration
 	{
-		public bool Enabled { get; }
+		public bool Enabled { get; set; }
 	}
 }

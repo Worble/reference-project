@@ -1,5 +1,4 @@
 using System;
-using System.Threading.Tasks;
 using Forum.Domain.Abstractions.Models;
 
 namespace Forum.Domain.Forum.Topics
@@ -13,13 +12,10 @@ namespace Forum.Domain.Forum.Topics
 			_topic = new Topic();
 		}
 
-		public async Task<Topic> Build()
+		public Topic Build()
 		{
 			_topic.Validate();
 			_topic.AddDomainEvent(new TopicCreatedEvent(_topic));
-			await _topic
-				.DispatchDomainEventsAsync()
-				.ConfigureAwait(false);
 			return _topic;
 		}
 

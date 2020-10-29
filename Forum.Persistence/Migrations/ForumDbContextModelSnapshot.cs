@@ -4,6 +4,7 @@ using Forum.Persistence.DbContexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Forum.Persistence.Migrations
 {
@@ -14,43 +15,56 @@ namespace Forum.Persistence.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.8");
+                .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn)
+                .HasAnnotation("ProductVersion", "3.1.9")
+                .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
-            modelBuilder.Entity("Forum.Application.Common.Posts.PostEntity", b =>
+            modelBuilder.Entity("Forum.Application.Common.Audit.AuditLog", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<string>("AuditCreatedById")
+                    b.Property<object>("AuditData")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("jsonb");
 
-                    b.Property<string>("AuditCreatedByName")
+                    b.Property<DateTime>("AuditDate")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("EntityPrimaryKey")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("text");
 
-                    b.Property<DateTime>("AuditCreatedDateUtc")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("EntityType")
+                        .IsRequired()
+                        .HasColumnType("text");
 
-                    b.Property<string>("AuditLastModifiedById")
-                        .HasColumnType("TEXT");
+                    b.HasKey("Id");
 
-                    b.Property<string>("AuditLastModifiedByName")
-                        .HasColumnType("TEXT");
+                    b.ToTable("AuditLogs");
+                });
 
-                    b.Property<DateTime?>("AuditLastModifiedUtc")
-                        .HasColumnType("TEXT");
+            modelBuilder.Entity("Forum.Domain.Forum.Posts.Post", b =>
+                {
+                    b.Property<int?>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("Content")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("text");
 
                     b.Property<int>("CreatedById")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime>("CreatedDateUtc")
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<int>("ThreadId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 
@@ -61,78 +75,48 @@ namespace Forum.Persistence.Migrations
                     b.ToTable("Posts");
                 });
 
-            modelBuilder.Entity("Forum.Application.Common.Threads.ThreadEntity", b =>
+            modelBuilder.Entity("Forum.Domain.Forum.Threads.Thread", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<string>("AuditCreatedById")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("CreatedById")
+                        .HasColumnType("integer");
 
-                    b.Property<string>("AuditCreatedByName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("AuditCreatedDateUtc")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("AuditLastModifiedById")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("AuditLastModifiedByName")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime?>("AuditLastModifiedUtc")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("text");
 
                     b.Property<int>("TopicId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CreatedById");
 
                     b.HasIndex("TopicId");
 
                     b.ToTable("Threads");
                 });
 
-            modelBuilder.Entity("Forum.Application.Common.Topics.TopicEntity", b =>
+            modelBuilder.Entity("Forum.Domain.Forum.Topics.Topic", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("AuditCreatedById")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("AuditCreatedByName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("AuditCreatedDateUtc")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("AuditLastModifiedById")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("AuditLastModifiedByName")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime?>("AuditLastModifiedUtc")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("text");
 
-                    b.Property<int>("ParentId")
-                        .HasColumnType("INTEGER");
+                    b.Property<int?>("ParentId")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 
@@ -141,80 +125,74 @@ namespace Forum.Persistence.Migrations
                     b.ToTable("Topics");
                 });
 
-            modelBuilder.Entity("Forum.Application.Common.Users.UserEntity", b =>
+            modelBuilder.Entity("Forum.Domain.Forum.Users.User", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("AuditCreatedById")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("AuditCreatedByName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("AuditCreatedDateUtc")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("AuditLastModifiedById")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("AuditLastModifiedByName")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime?>("AuditLastModifiedUtc")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("EmailAddress")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("JoinDateUtc")
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("text");
 
                     b.Property<string>("Username")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("EmailAddress")
+                        .IsUnique();
+
+                    b.HasIndex("Username")
+                        .IsUnique();
 
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Forum.Application.Common.Posts.PostEntity", b =>
+            modelBuilder.Entity("Forum.Domain.Forum.Posts.Post", b =>
                 {
-                    b.HasOne("Forum.Application.Common.Users.UserEntity", "CreatedBy")
+                    b.HasOne("Forum.Domain.Forum.Users.User", "CreatedBy")
                         .WithMany("Posts")
                         .HasForeignKey("CreatedById")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Forum.Application.Common.Threads.ThreadEntity", "Thread")
+                    b.HasOne("Forum.Domain.Forum.Threads.Thread", "Thread")
                         .WithMany("Posts")
                         .HasForeignKey("ThreadId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Forum.Application.Common.Threads.ThreadEntity", b =>
+            modelBuilder.Entity("Forum.Domain.Forum.Threads.Thread", b =>
                 {
-                    b.HasOne("Forum.Application.Common.Topics.TopicEntity", "Topic")
+                    b.HasOne("Forum.Domain.Forum.Users.User", "CreatedBy")
+                        .WithMany("Threads")
+                        .HasForeignKey("CreatedById")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Forum.Domain.Forum.Topics.Topic", "Topic")
                         .WithMany("Threads")
                         .HasForeignKey("TopicId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Forum.Application.Common.Topics.TopicEntity", b =>
+            modelBuilder.Entity("Forum.Domain.Forum.Topics.Topic", b =>
                 {
-                    b.HasOne("Forum.Application.Common.Topics.TopicEntity", "Parent")
+                    b.HasOne("Forum.Domain.Forum.Topics.Topic", "Parent")
                         .WithMany("Children")
-                        .HasForeignKey("ParentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ParentId");
                 });
 #pragma warning restore 612, 618
         }

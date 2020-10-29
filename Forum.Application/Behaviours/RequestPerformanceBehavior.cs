@@ -45,15 +45,15 @@ namespace Forum.Application.Behaviours
 			var userExists = _currentUserService.TryGetCurrentUser(out var user);
 
 			if (_optionsSnapshot.Value.WarningLogTimeMilliseconds.HasValue &&
-				_timer.ElapsedMilliseconds > _optionsSnapshot.Value.WarningLogTimeMilliseconds)
+			    _timer.ElapsedMilliseconds > _optionsSnapshot.Value.WarningLogTimeMilliseconds)
 			{
 				_logger.LogWarning(
-					$"User {(userExists ? user!.Username : string.Empty)} executed request ms {name} ({_timer.ElapsedMilliseconds} milliseconds) which was over longer than {_optionsSnapshot.Value.WarningLogTimeMilliseconds} ms with parameters {_jsonSerializer.Serialize(request)}");
+					$"{(userExists ? user!.Username : "Anonymous User")} executed request ms {name} ({_timer.ElapsedMilliseconds} milliseconds) which was over longer than {_optionsSnapshot.Value.WarningLogTimeMilliseconds} ms with parameters {_jsonSerializer.Serialize(request)}");
 			}
 			else if (_optionsSnapshot.Value.LogAllTimes)
 			{
 				_logger.LogInformation(
-					$"User {(userExists ? user!.Username : string.Empty)} executed request {name} ({_timer.ElapsedMilliseconds} milliseconds) with parameters {_jsonSerializer.Serialize(request)}");
+					$"{(userExists ? user!.Username : "Anonymous User")} executed request {name} ({_timer.ElapsedMilliseconds} milliseconds) with parameters {_jsonSerializer.Serialize(request)}");
 			}
 
 			return response;

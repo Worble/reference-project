@@ -1,77 +1,39 @@
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Forum.Application.Abstractions.Dates;
+using Audit.EntityFramework;
 using Forum.Application.Abstractions.DbContexts;
-using Forum.Application.Abstractions.Identity;
-using Forum.Application.Common.Forum.AuditEntries;
-using Forum.Application.Models;
+using Forum.Application.Common.Audit;
 using Forum.Domain.Forum.Posts;
 using Forum.Domain.Forum.Topics;
 using Forum.Domain.Forum.Users;
-using Forum.Persistence.Models.ForumDbContextConfigurations;
+using Forum.Domain.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using Thread = Forum.Domain.Forum.Threads.Thread;
 
 namespace Forum.Persistence.DbContexts
 {
-	public class ForumDbContext : DbContext, IForumDbContext
+	public class ForumDbContext : AuditDbContext, IForumDbContext
 	{
-		private readonly ICurrentUserService _currentUserService;
-		private readonly IDateTimeService _dateTimeService;
-		private readonly IOptionsSnapshot<ForumDbContextConfiguration> _options;
-
-		public ForumDbContext(
-			DbContextOptions<ForumDbContext> options,
-			ICurrentUserService currentUserService, IOptionsSnapshot<ForumDbContextConfiguration> optionsSnapshot,
-			IDateTimeService dateTimeService)
+		public ForumDbContext(DbContextOptions<ForumDbContext> options)
 			: base(options)
 		{
-			_currentUserService = currentUserService;
-			_options = optionsSnapshot;
-			_dateTimeService = dateTimeService;
 		}
 
-		public DbSet<Post> Posts { get; } = default!;
-		public DbSet<Thread> Threads { get; } = default!;
-		public DbSet<Topic> Topics { get; } = default!;
-		public DbSet<User> Users { get; } = default!;
-		public DbSet<AuditEntry> AuditEntries { get; } = default!;
+		public DbSet<Post> Posts { get; set; }
+		public DbSet<AuditLog> AuditLogs { get; set; }
+		public DbSet<Thread> Threads { get; set; }
+		public DbSet<Topic> Topics { get; set; }
+		public DbSet<User> Users { get; set; }
 
-		public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
+		public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
 		{
-			foreach (var entry in ChangeTracker.Entries<AuditableDbEntity>())
-			{
-				var userExists = _currentUserService.TryGetCurrentUser(out var user);
-				switch (entry.State)
-				{
-					case EntityState.Added:
-						entry.Entity.AuditCreatedById = userExists
-							? user!.Id.ToString()
-							: _options.Value.DefaultUserId;
+			var result = await base.SaveChangesAsync(cancellationToken);
 
-						entry.Entity.AuditCreatedByName = userExists
-							? user!.Username
-							: _options.Value.DefaultUsername;
+			var tasks = ChangeTracker.Entries<DomainEntity>().Select(entry => entry.Entity.DispatchDomainEventsAsync());
+			await Task.WhenAll(tasks);
 
-						entry.Entity.AuditCreatedDateUtc = _dateTimeService.UtcNow;
-						break;
-
-					case EntityState.Modified:
-						entry.Entity.AuditLastModifiedById = userExists
-							? user!.Id.ToString()
-							: _options.Value.DefaultUserId;
-
-						entry.Entity.AuditLastModifiedByName = userExists
-							? user!.Username
-							: _options.Value.DefaultUsername;
-
-						entry.Entity.AuditLastModifiedUtc = _dateTimeService.UtcNow;
-						break;
-				}
-			}
-
-			return base.SaveChangesAsync(cancellationToken);
+			return result;
 		}
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder) =>

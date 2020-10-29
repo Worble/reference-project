@@ -10,26 +10,21 @@ using Microsoft.EntityFrameworkCore;
 namespace Forum.Application.Forum.Queries.GetAllUsers
 {
 	public class GetAllUsersQuery : ICacheableQuery, IRequest<List<GetAllUsersViewModel>>
-	{
-		public bool BypassCache { get; }
-		public string CacheKey { get; } = string.Empty;
-		public bool RefreshCachedEntry { get; }
-		public bool ReplaceCachedEntry { get; }
-	}
+	{}
 
 	public class GetEmployeeListQueryHandler : IRequestHandler<GetAllUsersQuery, List<GetAllUsersViewModel>>
 	{
-		private readonly IForumDbContext _forumDbContext;
+		private readonly IForumDbContext _dbContext;
 
-		public GetEmployeeListQueryHandler(IForumDbContext forumDbContext)
+		public GetEmployeeListQueryHandler(IForumDbContext dbContext)
 		{
-			_forumDbContext = forumDbContext;
+			_dbContext = dbContext;
 		}
 
 		public async Task<List<GetAllUsersViewModel>> Handle(GetAllUsersQuery request,
 			CancellationToken cancellationToken) =>
-			await _forumDbContext.Users
-				.Select(e => new GetAllUsersViewModel {Username = e.Username})
+			await _dbContext.Users
+				.Select(e => new GetAllUsersViewModel {Username = e.Username, Id = e.Id})
 				.ToListAsync(cancellationToken);
 	}
 }

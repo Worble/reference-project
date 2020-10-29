@@ -1,14 +1,13 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Forum.Application.Forum.Queries.GetAllUsers;
+using Forum.Presentation.Controllers.Base;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Forum.Presentation.Controllers
 {
-	[ApiController]
-	[Route("[controller]")]
-	public class UserController : ControllerBase
+	public class UserController : ForumControllerBase
 	{
 		private readonly IMediator _mediator;
 

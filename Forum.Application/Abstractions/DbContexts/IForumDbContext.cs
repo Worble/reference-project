@@ -1,6 +1,6 @@
 using System.Threading;
 using System.Threading.Tasks;
-using Forum.Application.Common.Forum.AuditEntries;
+using Forum.Application.Common.Audit;
 using Forum.Domain.Forum.Posts;
 using Forum.Domain.Forum.Topics;
 using Forum.Domain.Forum.Users;
@@ -15,8 +15,7 @@ namespace Forum.Application.Abstractions.DbContexts
 		DbSet<Topic> Topics { get; }
 		DbSet<Thread> Threads { get; }
 		DbSet<Post> Posts { get; }
-		DbSet<AuditEntry> AuditEntries { get; }
-
+		DbSet<AuditLog> AuditLogs { get; }
 		Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 	}
 }
